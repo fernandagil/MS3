@@ -20,8 +20,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def hello():
-    return "Hello"
+@app.route("/get_reviews")
+def get_reviews():
+    movies = mongo.db.movies.find()
+    return render_template("reviews.html", movies=movies)
 
 
 if __name__ == "__main__":

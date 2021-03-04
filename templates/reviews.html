@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV SHOWS REVIEWS</title>
+</head>
+<body>
+    <h1>TV</h1>
+    {% for movie in movies %}
+        {{ movie.name }}<br>
+        {{ movie.year }}<br>
+        {{ movie.genre }}<br>
+        {{ movie.trailer }}<br>
+    {% endfor %}
+</body>
+</html>
