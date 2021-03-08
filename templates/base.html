@@ -16,7 +16,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Movies</a>
+            <a class="navbar-brand" href="{{ url_for('get_reviews') }}">Movies</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
 
     </header>
 
-    <section>
+    <main class="main-bg">
         <div class="container-fluid">
             <div class="row bg-info text-center">
                 {% block page %}
@@ -56,8 +56,20 @@
                 {% endblock %}
             </div>
         </div>
-    </section>
-    
+
+        <section>
+            <!-- flash messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="row flashes">
+                            <h5>{{ message }}</h5>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
