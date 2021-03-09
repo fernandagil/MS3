@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page %}
-    <h2>register</h2>
+    <h2>login</h2>
 {% endblock %}
 
 {% block content %}
@@ -9,10 +9,10 @@
     <div class="col-md-6 offset-md-3">
         <div class="card">
             <div class="card-body">
-                <form method="POST" action="{{ url_for('register') }}">
+                <form method="POST" action="{{ url_for('login') }}">
                     <!-- username -->
                     <div class="form-group">
-                        <i class="fas fa-user-plus prefix"></i>
+                        <i class="fas fa-user-cog prefix"></i>
                         <label for="username">User name</label>
 						<input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
@@ -24,12 +24,12 @@
                         <input id="password" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
                     </div>
-                    <!-- register button -->
+                    <!-- login button -->
                     <button type="submit" class="btn btn-outline-success">Submit</button>
-                    <!-- login option -->
+                    <!-- register option -->
                     <div class="form-group form-login">
-                        <h6 class="card-subtitle mb-2 text-muted">If you already have an account, <br>
-                            <a href="{{ url_for('login') }}">log in here!</a></h6>
+                        <h6 class="card-subtitle mb-2 text-muted">If you don't have an account yet, <br>
+                            <a href="{{ url_for('register') }}">register here!</a></h6>
                     </div>
                 </form>
                 
