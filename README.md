@@ -1,45 +1,93 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# MS3
+ 
+![]()
+ 
+You can visit the deployed website [here](https://fernandagil.github.io/ms2-olespanish-game/).
+ 
+---
+ 
+## 1. UX
+ 
+### 1.1. Project Goals
 
-Welcome fernandagil,
+ 
+### 1.2. User Stories
+- As a user, I want to immediately understand the purpose of the site.
+- As a user, I want to be able to leave a review about a tv show I liked or disliked.
+- As a user, I want to be able to edit the reviews I alredy created.
+- As a user, I want to be able to delete the reviews I created.
+- As a user, I want to be able to see reviews that other users have created.
+- As a user, I want to be able to search for a movie or genre.
+- As a user, I want to keep track of all the tv shows, movies and documentaries I’m watching at the moment.
+- As a user, I want to keep track of all the tv shows, movies and documentaries I’d like to watch.
+- As a user, I want to keep track of all the tv shows, movies and documentaries I already watched.
+- As a user, I want to see where I could watch the shows I'm interested in.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+---
+ 
+## 2. Features
+ 
+### 2.1. Existing features
+ 
+### 2.2. Potential Features
+ 
+---
+ 
+## 3. Technologies used
+ 
+- [HTML5](https://html.com/) - provides the content and structure for my website.
+- [CSS3](http://www.css3.info/) - provides the styling.
+- [Bootstrap](https://getbootstrap.com/) - used to create the layout of the project and some styling.
+- [Python]() - 
+- [Flask]() - used in conjunction with the Jinja2 templating language to generate the HTML templates on the backend. It was also used to access and process the data sent from the frontend to the server.
+- [MongoDB]() - 
+- [Balsamiq](https://balsamiq.com/) - used to create the project's wireframes.
+- [Gitpod](https://gitpod.io/) - used to develop the website.
+- [GitHub](https://github.com/) - 
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+---
+ 
+## 4. Testing
+ 
+The testing process can be seen [here](TESTING.md).
+ 
+---
+ 
+## 5. Deployment
+ 
+###### Heroku deployment
 
-`python3 -m http.server`
+Heroku needs some application and dependencies to run the app
+1. Create a **requirements.txt** file using the terminal command  `pip freeze > requirements.txt`.
+2. Create a  **Procfile ** with the terminal command  `echo web: python app.py > Procfile`.
+3. Push these files to GitHub
+* The Procfile might add a blank line at the bottom, and sometimes this can cause problems when running our app on Heroku, so just delete that line and save the file.
+4. Go to [Heroku](https://www.heroku.com/) and once you're logged in on your dashboard, click on the **New** button and there click **Create a New App**.
+5. Give the new app a name and set the region closest to you, then click the **Create App** 
+6. This will take you to the **Deploy** tab of your newly created app. There go to **Deployment method** and select **GitHub**. 
+7. In **Connect to GitHub**, search for your repository and click **Connect** to connect it to this app.
+8. In the Heroku dashboard for the app, go to **Settings**, and then scroll down and click on **Reveal Config Vars**. Set the following config vars:
+|  Key  |  Value  |
+| :-------------: | :-------------: |
+|  IP |  0.0.0.0  |
+|  PORT  |  5000  |
+|  SECRET_KEY  |  <your_secret_key>  |
+|  MONGO_URI  |    |
+mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+|  MONGO_DBNAME  |  movies  |
 
-A blue button should appear to click: *Make Public*,
+9. In the Heroku dashboard for the app, go to **Deploy**, scroll down and click on **Enable Automatic Deployment**
+10. Below that select the branch that you want to deploy (in this case *master*) and click **Deploy Branch**
+11. Once that’s done, you can click **View** to launch your app
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+---
+ 
+## 6. Credits
+ 
+### 6.1. Content
+ 
+### 6.2. Media
+ 
+### 6.1. Acknowledgments
