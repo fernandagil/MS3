@@ -87,6 +87,7 @@ Heroku needs some application and dependencies to run the app
 ## 6. Credits
  
 ### 6.1. Content
+The project's main code is based on the Code Institute Task Manger Mini-Project by [Tim Nelson](https://github.com/TravelTimN).
  
 ### 6.2. Media
  
