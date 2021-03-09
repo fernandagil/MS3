@@ -2,7 +2,7 @@
  
 ![]()
  
-You can visit the deployed website [here](https://fernandagil.github.io/ms2-olespanish-game/).
+You can visit the deployed website [here](https://ms3-fernanda.herokuapp.com/).
  
 ---
  
@@ -68,14 +68,14 @@ Heroku needs some application and dependencies to run the app
 6. This will take you to the **Deploy** tab of your newly created app. There go to **Deployment method** and select **GitHub**. 
 7. In **Connect to GitHub**, search for your repository and click **Connect** to connect it to this app.
 8. In the Heroku dashboard for the app, go to **Settings**, and then scroll down and click on **Reveal Config Vars**. Set the following config vars:
+
 |  Key  |  Value  |
 | :-------------: | :-------------: |
 |  IP |  0.0.0.0  |
 |  PORT  |  5000  |
-|  SECRET_KEY  |  <your_secret_key>  |
-|  MONGO_URI  |    |
-mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
-|  MONGO_DBNAME  |  movies  |
+|  SECRET_KEY  |  `<your_secret_key>`  |
+|  MONGO_URI  | mongodb+srv://`<username>`:`<password>`@`<cluster_name>`-qtxun.mongodb.net/`<database_name>`?retryWrites=true&w=majority  |
+|  MONGO_DBNAME  |  `<database name>`  |
 
 9. In the Heroku dashboard for the app, go to **Deploy**, scroll down and click on **Enable Automatic Deployment**
 10. Below that select the branch that you want to deploy (in this case *master*) and click **Deploy Branch**
