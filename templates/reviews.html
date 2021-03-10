@@ -31,15 +31,22 @@
                                 </div>
                                 <div class="col-md-5 offset-md-2">
                                     <img src="#" alt="{{ movie.name }}">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <button class="btn btn-outline-dark btn-sm">watching</button>
-                                        </div>
-                                        <div class="col-4">
-                                            <button class="btn btn-outline-dark btn-sm">to watch</button>
-                                        </div>
-                                        <div class="col-4">
-                                            <button class="btn btn-outline-dark btn-sm">watched</button>
+                                    <div class="row watch-lists-collapse">
+                                        <div class="col-12">
+                                            <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button" aria-expanded="false" aria-controls="collapse-lists">
+                                                Add to my lists
+                                            </a>
+                                            <div class="collapse" id="collapse-lists">
+                                                {% if session.user %}
+                                                    <button class="btn btn-outline-dark btn-sm">watching</button>
+                                                    <button class="btn btn-outline-dark btn-sm">to watch</button>
+                                                    <button class="btn btn-outline-dark btn-sm">watched</button>
+                                                {% else %}
+                                                    <p>You need to 
+                                                        <a href="{{ url_for('login') }}">login</a> or 
+                                                        <a href="{{ url_for('register') }}">register</a> first!</p>
+                                                {% endif %}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -53,25 +60,36 @@
                                     
 
                                     <!-- user's input -->
-                                    <form>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-8 text-left">
-                                                    <h6>Add your own review</h6>
-                                                </div>
-                                                <div class="col-4 text-right">
-                                                    rating in stars
+                                    {% if session.user %}
+                                        <form>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="textarea" rows="2" placeholder="What did you like about this movie?"></textarea>
+                                                <div class="row">
+                                                    <div class="col-6 text-left">
+                                                        rating in stars
+                                                    </div>
+                                                    <div class="col-6 text-right">
+                                                        <button class="btn btn-light btn-sm btn-submit-review">Submit my review</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <textarea class="form-control" id="textarea" rows="2" placeholder="What did you like about this movie?"></textarea>
-                                            <button class="btn btn-light btn-sm btn-submit-review">Submit my review</button>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    {% else %}
+                                    <p>
+                                        <a href="{{ url_for('login') }}">Log in</a> or 
+                                        <a href="{{ url_for('register') }}">register</a> and leave your own review about {{ movie.name }}
+                                    </p>
+                                    {% endif %}
 
                                     <!-- other user's reviews -->
                                     <div class="row comment-section">
                                         <div class="col-12 comment-text">
                                             <p>opinion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quisquam quae fugiat temporibus assumenda tenetur adipisci error blanditiis saepe ipsam, possimus veritatis asperiores aliquid non qui enim magni vitae libero. <br>
+                                                <small class="text-right comment-footer">Created by: {session.user} on {created when?}</small>
+                                            </p>
+                                        </div>
+                                        <div class="col-12 comment-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quisquam quae fugiat temporibus assumenda tenetur adipisci error blanditiis saepe ipsam.<br>
                                                 <small class="text-right comment-footer">Created by: {session.user} on {created when?}</small>
                                             </p>
                                         </div>
@@ -83,11 +101,6 @@
                 </div>
                 <!-- endmodal -->
 
-                <!-- <p class="card-text">
-                    {{ movie.year }}<br>
-                    {{ movie.genre }}<br>
-                    <a href="{{ movie.trailer }}" class="trailer-link">Trailer</a>
-                </p> -->
             </div>
         </div>
    
