@@ -60,9 +60,11 @@ The testing process can be seen [here](TESTING.md).
 
 Heroku needs some application and dependencies to run the app
 1. Create a **requirements.txt** file using the terminal command  `pip freeze > requirements.txt`.
-2. Create a  **Procfile ** with the terminal command  `echo web: python app.py > Procfile`.
+2. Create a **Procfile** with the terminal command  `echo web: python app.py > Procfile`.
 3. Push these files to GitHub
-* The Procfile might add a blank line at the bottom, and sometimes this can cause problems when running our app on Heroku, so just delete that line and save the file.
+
+*The Procfile might add a blank line at the bottom, and sometimes this can cause problems when running our app on Heroku, so just delete that line and save the file.
+
 4. Go to [Heroku](https://www.heroku.com/) and once you're logged in on your dashboard, click on the **New** button and there click **Create a New App**.
 5. Give the new app a name and set the region closest to you, then click the **Create App** 
 6. This will take you to the **Deploy** tab of your newly created app. There go to **Deployment method** and select **GitHub**. 
