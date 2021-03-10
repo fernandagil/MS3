@@ -11,7 +11,17 @@ body {
     position: relative;
 }
 
-.main-bg {}
+.trailer-link {
+    color: gold;
+}
+
+.trailer-link:hover {
+  color: orange;
+}
+
+.main-bg {
+    background-color: orange;
+}
 
 .flashes {
     color: green;
@@ -30,4 +40,19 @@ body {
 
 .form-login a:hover {
     font-size: 110%;
+}
+
+
+/* Media queries for extra small devices */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 90%;
+    }
+}
+
+/* Media queries for small devices */
+@media only screen and (min-width: 600px) {
+    .card-body {
+        padding: 0.3;
+    }
 }

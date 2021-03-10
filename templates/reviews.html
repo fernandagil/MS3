@@ -1,47 +1,28 @@
 {% extends "base.html" %}
 {% block page %}
     <div class="home-bg-container">
-        <img class="home-bg" src="{{ url_for('static', filename='images/home-bg2.jpg') }}" alt="old camera">
+        <!-- <img class="home-bg" src="{{ url_for('static', filename='images/home-bg2.jpg') }}" alt="old camera"> -->
     </div>
 {% endblock %}
 
 {% block content %}
 
-    <div class="card-deck">
+    <div class="col-4 col-md-3">
+        {% for movie in movies %}
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="#" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <i class="fas fa-plus"></i>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{ movie.name }}</h5>
+                <!-- <i class="fas fa-plus"></i> -->
+                <p class="card-text">
+                    {{ movie.year }}<br>
+                    {{ movie.genre }}<br>
+                    <a href="{{ movie.trailer }}" class="trailer-link">Trailer</a>
+                </p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-
-    {% for movie in movies %}
-        {{ movie.name }}<br>
-        {{ movie.year }}<br>
-        {{ movie.genre }}<br>
-        {{ movie.trailer }}<br>
-    {% endfor %}
 
 {% endblock %}
