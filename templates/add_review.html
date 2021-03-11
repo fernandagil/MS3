@@ -6,8 +6,8 @@
 
 {% block content %}
 
-    <form class="col-10 offset-1" method="POST" action="">
-        <!-- header & info section -->
+    <form class="col-10 offset-1" method="POST" action="{{ url_for('add_review') }}">
+        <!-- movie title -->
         <div class="form-row">
             <div class="col-10">
                 <div class="row mb-3">
@@ -25,6 +25,8 @@
                 </div> -->
             </div>
         </div>
+
+        <!-- movie info -->
         <div class="form-row">
             <div class="col-6">
                 <div class="row mb-1">
@@ -68,7 +70,11 @@
                 </div>
             </div>
             <div class="col-6">
+
+                <!-- add image -->
                 <img src="#" class="img-thumbnail">
+
+                <!-- add to watchlist -->
                 <div class="row watch-lists-collapse">
                     <div class="col-12">
                         <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
@@ -92,7 +98,13 @@
             <textarea class="form-control" id="textarea" rows="2"
                 placeholder="What did you like about this movie?"></textarea>
         </div>
-        <button class="btn btn-light btn-sm btn-submit-review">Add New Movie</button>
+
+        <!-- submit button -->
+        <div class="form-row text-center">
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add New Movie</button>
+            </div>
+        </div>
 
     </form>
 

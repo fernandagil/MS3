@@ -20,7 +20,7 @@
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="container-fluid modal-content">
 
-                            <!-- header & info section -->
+                            <!-- movie title -->
                             <div class="row movie-modal-row">
                                 <div class="col-10">
                                     <h3 class="card-title">{{ movie.movie_name }}</h3>
@@ -29,6 +29,8 @@
                                     rate
                                 </div>
                             </div>
+
+                            <!-- movie info -->
                             <div class="row movie-modal-row">
                                 <div class="col-6 info-modal text-left">
                                     <p>
@@ -43,7 +45,11 @@
                                     
                                 </div>
                                 <div class="col-6">
+
+                                    <!-- image -->
                                     <img src="#" alt="{{ movie.name }}">
+
+                                    <!-- watchlist -->
                                     <div class="row watch-lists-collapse">
                                         <div class="col-12">
                                             <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button" aria-expanded="false" aria-controls="collapse-lists">
