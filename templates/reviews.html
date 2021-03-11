@@ -32,7 +32,6 @@
                             <div class="row movie-modal-row">
                                 <div class="col-6 info-modal text-left">
                                     <p>
-                                        rate<br>
                                         year: {{ movie.year }}<br>
                                         genre: {{ movie.genre }}<br>
                                         director: {{ movie.director }}<br>
@@ -48,7 +47,7 @@
                                     <div class="row watch-lists-collapse">
                                         <div class="col-12">
                                             <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button" aria-expanded="false" aria-controls="collapse-lists">
-                                                Add to my lists
+                                                Add to my list
                                             </a>
                                             <div class="collapse" id="collapse-lists">
                                                 {% if session.user %}
