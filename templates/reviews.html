@@ -21,10 +21,14 @@
                         <div class="container-fluid modal-content">
 
                             <!-- edit / delete buttons -->
-                            <div class="card-header text-right">
-                                <button type="button" class="btn btn-light edit-delete-btn">Edit</button>
-                                <button type="button" class="btn btn-light edit-delete-btn">Delete</button>
-                            </div>
+                            {% if session.user %}
+                                <div class="card-header text-right">
+                                    <a href="{{ url_for('edit_review', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn" role="button">Edit</a>
+                                    <a href="#" class="btn btn-light edit-delete-btn" role="button">Delete</a>
+                                    <!-- <button type="button" class="btn btn-light edit-delete-btn">Edit</button>
+                                    <button type="button" class="btn btn-light edit-delete-btn">Delete</button> -->
+                                </div>
+                            {% endif %}
 
                             <!-- movie title -->
                             <div class="row movie-modal-row">
@@ -105,12 +109,14 @@
                                     {% endif %}
 
                                     <!-- other user's reviews -->
-                                    <div class="row comment-section">
-                                        <div class="col-12 comment-text">
-                                            <p class="comment more">{{ movie.review }}</p>
-                                            <small class="text-right comment-footer">By: {{ movie.created_by }} on {created when?}</small>
+                                    {% if reviews|length > 0 %}
+                                        <div class="row comment-section">
+                                            <div class="col-12 comment-text">
+                                                <p class="comment more">{{ movie.review }}</p>
+                                                <small class="text-right comment-footer">By: {{ movie.created_by }} on {created when?}</small>
+                                            </div>
                                         </div>
-                                    </div>
+                                    {% endif %}
                                 </div>
                             </div>
 
