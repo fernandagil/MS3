@@ -42,9 +42,21 @@ body {
     font-size: 110%;
 }
 
+.form-icon {
+    color: orange;
+}
+
 /* movie modals */
 .movie-modal {
     padding: 20px;
+}
+
+.movie-modal-row {
+    padding: 20px;
+}
+
+.movie-synopsis {
+    max-lines: 2;
 }
 
 .movie-modal-title {
@@ -52,10 +64,14 @@ body {
     padding: 30px 0;
 }
 
+.info-modal {
+    background-color: sandybrown;
+    border-radius: 10px;
+}
+
 .watch-lists-collapse {
     width: 100%;
     color: orange;
-    border-radius: ;
 }
 
 .reviews-title {
@@ -64,6 +80,26 @@ body {
     max-width: 600px;
     position: relative;
 }
+
+/* show more/less functionality  */
+.comment {
+    padding-bottom: 0;
+    margin: 5px;
+    transition: all 0.2s;
+    margin: 0 auto;
+}
+
+a.morelink {
+	text-decoration:none;
+    outline: none;
+    color: seagreen;
+}
+
+.morecontent span {
+	display: none;
+}
+
+
 
 .btn-submit-review {
     margin-top: 5px;
@@ -102,7 +138,7 @@ body {
 }
 
 .comment-text {
-    padding-bottom: 0;
+    padding-top: 24px;
 }
 
 .comment-footer {

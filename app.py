@@ -27,11 +27,6 @@ def get_reviews():
     return render_template("reviews.html", movies=movies)
 
 
-@app.route("/add_review")
-def add_review():
-    return render_template("add_review.html")
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -101,7 +96,13 @@ def logout():
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
-    return redirect(url_for("get_reviews")) #where to redirect after logout (to login again or main page?)
+    # where to redirect after logout (to login again or main page?)
+    return redirect(url_for("get_reviews")) 
+
+
+@app.route("/add_review")
+def add_review():
+    return render_template("add_review.html")
 
 
 if __name__ == "__main__":

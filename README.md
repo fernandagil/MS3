@@ -90,6 +90,8 @@ Heroku needs some application and dependencies to run the app
  
 ### 6.1. Content
 The project's main code is based on the Code Institute Task Manger Mini-Project by [Tim Nelson](https://github.com/TravelTimN).
+
+The functionality for the *show more*/*show less* button is based in [this article](https://www.viralpatel.net/dynamically-shortened-text-show-more-link-jquery/) from Viralpatel.net.
  
 ### 6.2. Media
  
