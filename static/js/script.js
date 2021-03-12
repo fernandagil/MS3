@@ -1,3 +1,4 @@
+// read more/less button
 $(document).ready(function() {
 	var showChar = 130;
 	var ellipsestext = "...";
