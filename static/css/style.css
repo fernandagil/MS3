@@ -46,6 +46,11 @@ body {
     color: orange;
 }
 
+.movie-card-display {
+    background-image: url("../images/card-bg.png");
+    background-size: cover;
+}
+
 /* movie modals */
 .movie-modal {
     padding: 20px;
