@@ -6,6 +6,22 @@ body {
     /* font-family: "Raleway", sans-serif; */
 }
 
+/* --------------- NAVBAR --------------- */
+.nav-bar {
+    color: #fafafa;
+    background-color: #555555;
+    border-bottom: 4px dotted #fafafa;
+}
+
+.movie-journal-icon {
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
 /* --------------- BACKGROUNDS & IMAGES --------------- */
 .home-header-bg {
     background-image: url("../images/home-bg.png");
