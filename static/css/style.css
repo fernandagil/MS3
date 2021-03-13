@@ -22,8 +22,6 @@ body {
     background-image: url("../images/card-bg.png");
     background-size: cover;
     margin: 5px 0;
-    min-width: 100px;
-    min-height: 100px;
 }
 
 
