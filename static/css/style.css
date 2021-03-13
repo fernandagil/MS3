@@ -1,5 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Londrina+Shadow&family=Montserrat&family=Pacifico&family=Poiret+One&family=Raleway&family=Ribeye+Marrow&display=swap');
+
 body {
     text-align: center;
+    /* font-family: "Raleway", sans-serif; */
 }
 
 /* --------------- BACKGROUNDS & IMAGES --------------- */
@@ -32,7 +36,13 @@ body {
 
 /* --------------- HOME --------------- */
 .home-header {
+    margin: 30px;
     color: #fafafa;
+    text-shadow: 4px -4px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 10rem;
+    letter-spacing: 10px;
 }
 
 
@@ -210,6 +220,11 @@ a.morelink {
     }
     .review-form{
         padding: 4px;
+    }
+    .home-header {
+        margin: 50px 0;
+        font-size: 4.5rem;
+        letter-spacing: 5px;
     }
 }
 
