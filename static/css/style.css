@@ -2,6 +2,7 @@ body {
     text-align: center;
 }
 
+/* --------------- BACKGROUNDS & IMAGES --------------- */
 .home-bg {
     height: 500px;
     background-position: center;
@@ -10,6 +11,14 @@ body {
     justify-content: center;
     position: relative;
 }
+
+
+.movie-card-display {
+    background-image: url("../images/card-bg.png");
+    background-size: cover;
+}
+
+
 
 .trailer-link {
     color: gold;
@@ -46,12 +55,7 @@ body {
     color: orange;
 }
 
-.movie-card-display {
-    background-image: url("../images/card-bg.png");
-    background-size: cover;
-}
-
-/* movie modals */
+/* --------------- MOVIE MODALS --------------- */
 .movie-modal {
     padding: 20px;
 }
@@ -87,6 +91,11 @@ body {
     border-radius: 10px;
 }
 
+.modal-img {
+    min-width: 100px;
+    min-height: 100px;
+}
+
 .watch-lists-collapse {
     width: 100%;
     color: orange;
@@ -99,7 +108,7 @@ body {
     position: relative;
 }
 
-/* show more/less functionality  */
+/* --------------- SHOW MORE/LESS --------------- */
 .comment {
     padding-bottom: 0;
     margin: 5px;
@@ -163,6 +172,8 @@ a.morelink {
     color: grey;
 }
 
+
+/* --------------- MEDIA QUERIES --------------- */
 
 /* Media queries for extra small devices */
 @media only screen and (max-width: 600px) {
