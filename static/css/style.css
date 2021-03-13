@@ -12,6 +12,11 @@ body {
     position: relative;
 }
 
+.div-bg {
+    background-image: url("../images/div-bg.jpg");
+    background-repeat: repeat;
+    background-size: 200px;
+}
 
 .movie-card-display {
     background-image: url("../images/card-bg.png");
