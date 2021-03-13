@@ -26,9 +26,7 @@
                             {% if session.user|lower == movie.created_by|lower %}
                                 <div class="card-header text-right">
                                     <a href="{{ url_for('edit_review', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn" role="button">Edit</a>
-                                    <a href="#" class="btn btn-light edit-delete-btn" role="button">Delete</a>
-                                    <!-- <button type="button" class="btn btn-light edit-delete-btn">Edit</button>
-                                    <button type="button" class="btn btn-light edit-delete-btn">Delete</button> -->
+                                    <a href="{{ url_for('delete_review', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn" role="button">Delete</a>
                                 </div>
                             {% endif %}
 
