@@ -29,13 +29,11 @@ body {
     background-size: cover;
 }
 
-.home-bg {
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
+
+.pages-header-bg {
+    background-image: url("../images/header.png");
+    min-height: 10vhvh;
     background-size: cover;
-    justify-content: center;
-    position: relative;
 }
 
 .div-bg {
@@ -50,7 +48,7 @@ body {
     margin: 5px 0;
 }
 
-/* --------------- HOME --------------- */
+/* --------------- HEADERS --------------- */
 .home-header {
     margin: 30px;
     color: #fafafa;
@@ -60,6 +58,18 @@ body {
     font-size: 10rem;
     letter-spacing: 10px;
 }
+
+.pages-header {
+    margin: 10px;
+    color: #fafafa;
+    text-shadow: 2px -2px 2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-align: right;
+}
+
 
 
 
