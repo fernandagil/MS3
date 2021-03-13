@@ -3,6 +3,12 @@ body {
 }
 
 /* --------------- BACKGROUNDS & IMAGES --------------- */
+.home-header-bg {
+    background-image: url("../images/home-bg.png");
+    min-height: 75vh;
+    background-size: cover;
+}
+
 .home-bg {
     height: 500px;
     background-position: center;
@@ -24,8 +30,14 @@ body {
     margin: 5px 0;
 }
 
+/* --------------- HOME --------------- */
+.home-header {
+    color: #fafafa;
+}
 
 
+
+/* --------------- DISPLAY MOVIES CARDS --------------- */
 .trailer-link {
     color: gold;
 }
