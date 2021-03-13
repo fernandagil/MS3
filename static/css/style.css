@@ -32,7 +32,7 @@ body {
 
 .pages-header-bg {
     background-image: url("../images/header.png");
-    min-height: 10vhvh;
+    min-height: 10vh;
     background-size: cover;
 }
 
@@ -55,14 +55,14 @@ body {
     text-shadow: 4px -4px #418a7b;
     font-family: "Londrina Shadow", cursive;
     font-weight: bold;
-    font-size: 10rem;
+    font-size: 8rem;
     letter-spacing: 10px;
 }
 
 .pages-header {
     margin: 10px;
     color: #fafafa;
-    text-shadow: 2px -2px 2px #418a7b;
+    text-shadow: 2px -2px #418a7b;
     font-family: "Londrina Shadow", cursive;
     font-weight: bold;
     font-size: 3rem;
