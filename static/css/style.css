@@ -21,6 +21,9 @@ body {
 .movie-card-display {
     background-image: url("../images/card-bg.png");
     background-size: cover;
+    margin: 5px 0;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 
@@ -193,3 +196,19 @@ a.morelink {
         padding: 0.3;
     }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
