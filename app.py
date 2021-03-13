@@ -148,8 +148,6 @@ def edit_review(movie_id):
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     return render_template("edit_review.html", movie=movie)
 
-    
-
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
