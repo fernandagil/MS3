@@ -3,7 +3,7 @@
 
 body {
     text-align: center;
-    /* font-family: "Raleway", sans-serif; */
+    font-family: "Raleway", sans-serif;
 }
 
 /* --------------- NAVBAR --------------- */
@@ -248,9 +248,10 @@ a.morelink {
         padding: 4px;
     }
     .home-header {
-        margin: 50px 0;
+        margin: 70px 0;
         font-size: 4.5rem;
         letter-spacing: 5px;
+        text-align: right;
     }
 }
 
@@ -259,11 +260,16 @@ a.morelink {
     .card-body {
         padding: 0.3;
     }
+    .home-header {
+        text-align: right;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+    .home-header {
+        text-align: right;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -275,4 +281,3 @@ a.morelink {
 @media only screen and (min-width: 1200px) {
     
 }
-
