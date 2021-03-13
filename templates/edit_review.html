@@ -6,7 +6,7 @@
 
 {% block content %}
 
-    <form class="col-10 offset-1" method="POST" action="{{ url_for('edit_review', movie_id=movie._id) }}">
+    <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('edit_review', movie_id=movie._id) }}">
         <!-- movie title -->
         <div class="form-row">
             <div class="col-10">

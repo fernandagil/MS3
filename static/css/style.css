@@ -178,6 +178,16 @@ a.morelink {
     color: grey;
 }
 
+/* --------------- ADD & EDIT REVIEW PAGES --------------- */
+
+.review-form{
+    background-color: #3D3737;
+    border-radius: 0.5rem;
+    padding: 10px;
+    color: #fafafa;
+}
+
+
 
 /* --------------- MEDIA QUERIES --------------- */
 
@@ -185,6 +195,9 @@ a.morelink {
 @media only screen and (max-width: 600px) {
     body {
         font-size: 90%;
+    }
+    .review-form{
+        padding: 4px;
     }
 }
 
