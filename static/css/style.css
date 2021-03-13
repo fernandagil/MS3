@@ -87,7 +87,8 @@ body {
 }
 
 .flashes {
-    color: green;
+    color: #555555;
+    background-color: #418a7b;
     padding: 30px;
 }
 
