@@ -64,9 +64,11 @@
                             maxlength="120">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-1">
                     <label for="synopsis" class="col-sm-2 col-form-label">Synopsis</label>
-                    <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="3" maxlength="300"></textarea>
+                    <div class="col-sm-10">
+                        <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="3" maxlength="300"></textarea>
+                    </div>
                 </div>
             </div>
             <div class="col-6">
@@ -77,14 +79,14 @@
                 <!-- add to watchlist -->
                 <div class="row watch-lists-collapse">
                     <div class="col-12">
-                        <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
+                        <a class="btn btn-outline-light btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
                             aria-expanded="false" aria-controls="collapse-lists">
                             Add to my list
                         </a>
                         <div class="collapse" id="collapse-lists">
-                            <button class="btn btn-outline-dark btn-sm">watching</button>
-                            <button class="btn btn-outline-dark btn-sm">to watch</button>
-                            <button class="btn btn-outline-dark btn-sm">watched</button>
+                            <button class="btn btn-outline-light btn-sm">watching</button>
+                            <button class="btn btn-outline-light btn-sm">to watch</button>
+                            <button class="btn btn-outline-light btn-sm">watched</button>
                         </div>
                     </div>
                 </div>
