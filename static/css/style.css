@@ -104,14 +104,6 @@ body {
 
 
 
-.trailer-link {
-    color: gold;
-}
-
-.trailer-link:hover {
-  color: orange;
-}
-
 .main-bg {
     background-color: orange;
 }
@@ -145,6 +137,23 @@ body {
     padding: 20px;
 }
 
+.movie-modal-row-main {
+    background-color: #bacfcc;
+}
+
+.movie-info {
+    font-weight: bold;
+}
+
+.movie-info-link {
+    color: #418a7b;
+}
+
+.movie-info-link:hover {
+    text-decoration: none;
+}
+
+
 .card-header {
     padding: 2px;
     margin-bottom: 10px;
@@ -172,14 +181,14 @@ body {
 }
 
 .info-modal {
-    background-color: sandybrown;
-    border-radius: 10px;
+    
 }
 
 .modal-img {
     margin: 10px 0;
     min-width: 150px;
     max-width: 100%;
+    max-height: 280px;
     border-radius: 0.5rem;
 }
 
@@ -206,7 +215,7 @@ body {
 a.morelink {
 	text-decoration:none;
     outline: none;
-    color: seagreen;
+    color: #418a7b;
 }
 
 .morecontent span {

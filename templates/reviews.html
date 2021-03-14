@@ -47,16 +47,16 @@
                             </div>
 
                             <!-- movie info -->
-                            <div class="row movie-modal-row">
-                                <div class="col-md-6 info-modal text-left">
+                            <div class="row movie-modal-row movie-modal-row-main">
+                                <div class="col-md-6 text-left align-self-center">
                                     <p>
-                                        year: {{ movie.year }}<br>
-                                        genre: {{ movie.genre }}<br>
-                                        director: {{ movie.director }}<br>
-                                        main cast: {{ movie.main_cast }}<br>
-                                        <a href="{{ movie.year }}">Trailer</a>
+                                        <span class="movie-info">Year:</span> {{ movie.year }}<br>
+                                        <span class="movie-info">Genre:</span> {{ movie.genre }}<br>
+                                        <span class="movie-info">Director:</span> {{ movie.director }}<br>
+                                        <span class="movie-info">Main Cast:</span> {{ movie.main_cast }}<br>
+                                        <a href="{{ movie.year }}"><span class="movie-info movie-info-link">Trailer</span></a>
                                     </p>
-                                    <h6>Synopsis</h6>
+                                    <h6 class="movie-info">Synopsis</h6>
                                     <p class="movie-synopsis comment more">{{ movie.synopsis }}</p>
                                     
                                 </div>
@@ -66,23 +66,23 @@
                                     <img src="{{ movie.movie_img_link }}" class="modal-img" alt="{{ movie.name }}">
 
                                     <!-- watchlist -->
-                                    <div class="row watch-lists-collapse">
-                                        <div class="col-12">
-                                            <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button" aria-expanded="false" aria-controls="collapse-lists">
-                                                Add to my list
-                                            </a>
-                                            <div class="collapse" id="collapse-lists">
-                                                {% if session.user %}
-                                                    <button class="btn btn-outline-dark btn-sm">watching</button>
-                                                    <button class="btn btn-outline-dark btn-sm">to watch</button>
-                                                    <button class="btn btn-outline-dark btn-sm">watched</button>
-                                                {% else %}
-                                                    <p>You need to 
-                                                        <a href="{{ url_for('login') }}">login</a> or 
-                                                        <a href="{{ url_for('register') }}">register</a> first!</p>
-                                                {% endif %}
-                                            </div>
+                                    <div class="watch-lists-collapse">
+                                        <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
+                                            aria-expanded="false" aria-controls="collapse-lists">
+                                            Add to my list
+                                        </a>
+                                        <div class="collapse" id="collapse-lists">
+                                            {% if session.user %}
+                                            <button class="btn btn-outline-dark btn-sm">watching</button>
+                                            <button class="btn btn-outline-dark btn-sm">to watch</button>
+                                            <button class="btn btn-outline-dark btn-sm">watched</button>
+                                            {% else %}
+                                            <p>You need to
+                                                <a href="{{ url_for('login') }}">login</a> or
+                                                <a href="{{ url_for('register') }}">register</a> first!</p>
+                                            {% endif %}
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
