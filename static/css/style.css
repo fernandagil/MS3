@@ -43,9 +43,10 @@ body {
 }
 
 .movie-card-display {
-    background-image: url("../images/card-bg.png");
+    background-image: url("../images/card-bg8.png");
     background-size: cover;
     margin: 5px 0;
+    min-height: 300px;
 }
 
 /* --------------- HEADERS --------------- */
@@ -72,8 +73,25 @@ body {
 
 
 
-
 /* --------------- DISPLAY MOVIES CARDS --------------- */
+.card-img {
+    margin-top: 50px;
+    max-width: 120px;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    margin-top: 10px;
+}
+
+.card-footer {
+    padding-top: 0;
+    background-color: transparent;
+    border-top: transparent;
+}
+
+
+
 .trailer-link {
     color: gold;
 }
@@ -148,10 +166,8 @@ body {
 
 .modal-img {
     margin: 10px 0;
-    min-width: 100px;
+    min-width: 150px;
     max-width: 300px;
-    min-height: 100px;
-    max-height: 220px;
     border-radius: 0.5rem;
 }
 
