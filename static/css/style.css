@@ -275,6 +275,11 @@ a.morelink {
     border-radius: 0.5rem;
     padding: 10px;
     color: #fafafa;
+    padding: 30px;
+}
+
+.form-movie-input {
+    padding: 10px 0;
 }
 
 
