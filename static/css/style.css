@@ -225,7 +225,9 @@ a.morelink {
 
 
 .btn-submit-review {
-    margin-top: 5px;
+    margin-top: 15px;
+    background-color: #418a7b;
+    color: #fafafa;
 }
 
 /* .reviews-title:before {
@@ -280,6 +282,10 @@ a.morelink {
 
 .form-movie-input {
     padding: 10px 0;
+}
+
+.form-row-div {
+    margin: 20px 0;
 }
 
 

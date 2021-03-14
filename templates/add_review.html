@@ -11,20 +11,16 @@
 
     <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('add_review') }}">
         <!-- movie title -->
-        <div class="form-row">
-            <div class="col-10 offset-1">
-                <div class="row mb-3">
-                    <label for="movie_name" class="col-sm-2 col-form-label">Movie Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="movie_name" class="form-control form-control-lg" id="movie_name" minlength="3"
-                            maxlength="100" required>
-                    </div>
-                </div>
+        <div class="form-row form-row-div">
+            <div class="col-10 offset-1 col-form-label">
+                <h4>Movie Name</h4>
+                <input type="text" name="movie_name" class="form-control form-control-lg" minlength="3"
+                    maxlength="100" required>
             </div>
         </div>
 
         <!-- movie info -->
-        <div class="form-row form-movie-input">
+        <div class="form-row form-row-div">
             <div class="col-10 offset-1">
                 <div class="row mb-1">
                     <label for="year" class="col-sm-2 col-form-label">Year</label>
@@ -62,7 +58,7 @@
                     </div>
                 </div>
                 <div class="row mb-1">
-                    <label for="movie_image_link" class="col-sm-2 col-form-label">Image</label>
+                    <label for="movie_img_link" class="col-sm-2 col-form-label">Image</label>
                     <div class="col-sm-10">
                         <input type="text" name="movie_image_link" class="form-control" id="movie_image_link" placeholder="Add a link to Movie Poster" minlength="5"
                             maxlength="80">
@@ -71,7 +67,7 @@
                 <div class="row mb-1">
                     <label for="synopsis" class="col-sm-2 col-form-label">Synopsis</label>
                     <div class="col-sm-10">
-                        <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="3" maxlength="300"></textarea>
+                        <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="2" maxlength="300"></textarea>
                     </div>
                 </div>
             </div>
@@ -98,7 +94,7 @@
 
         <!-- review input -->
         <h5>Review this Movie</h5>
-        <div class="form-row">
+        <div class="form-row form-row-div">
             <div class="col-10 offset-1">
                 <div class="row mb-3">
                     <div class="col-sm-2">
@@ -113,10 +109,10 @@
         </div>
 
         <!-- submit and cancel buttons -->
-        <div class="form-row text-center">
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-light btn-sm btn-submit-review">Edit this Movie</button>
-                <a href="{{ url_for('get_reviews') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
+        <div class="form-row form-row-div text-center">
+            <div class="col-10 offset-1 text-center">
+                <button type="submit" class="btn btn-light btn-sm btn-block btn-submit-review">Add this Movie</button>
+                <a href="{{ url_for('get_reviews') }}" class="btn btn-light btn-block btn-sm btn-submit-review" role="button">Cancel</a>
             </div>
         </div>
     </form>

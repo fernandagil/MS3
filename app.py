@@ -111,7 +111,7 @@ def add_review():
             "main_cast": request.form.get("main_cast"),
             "trailer": request.form.get("trailer"),
             "synopsis": request.form.get("synopsis"),
-            "movie_image_link": request.form.get("movie_image_link"),
+            "movie_img_link": request.form.get("movie_img_link"),
             "watchlist": request.form.get("watchlist"),
             "review": request.form.get("review"),
             "created_by": session["user"],
