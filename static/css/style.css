@@ -74,13 +74,19 @@ body {
 
 
 /* --------------- DISPLAY MOVIES CARDS --------------- */
+.card-body {
+    padding: 1.25rem 0.4rem 0;
+}
+
 .card-img {
-    max-width: 130px;
+    max-height: 180px;
+    width: auto;
     border-radius: 0.5rem;
 }
 
 .card-title {
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .card-footer {
@@ -88,6 +94,12 @@ body {
     background-color: transparent;
     border-top: transparent;
 }
+
+.plus-btn {
+    color: #F6B86F;
+}
+
+
 
 
 
