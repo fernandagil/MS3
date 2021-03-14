@@ -100,8 +100,8 @@ def logout():
     return redirect(url_for("get_reviews")) 
 
 
-@app.route("/add_review", methods=["GET", "POST"])
-def add_review():
+@app.route("/add_movie", methods=["GET", "POST"])
+def add_movie():
     if request.method == "POST":
         movie = {
             "movie_name": request.form.get("movie_name"),
