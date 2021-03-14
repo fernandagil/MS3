@@ -10,6 +10,12 @@
 {% block content %}
 
     <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('add_movie') }}">
+
+        <!-- Cancel button -->
+        <div class="form-row">
+            <a href="{{ url_for('get_reviews') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
+        </div>
+
         <!-- movie title -->
         <div class="form-row form-row-div">
             <div class="col-10 offset-1 col-form-label">
@@ -68,6 +74,9 @@
                     <label for="synopsis" class="col-sm-2 col-form-label">Synopsis</label>
                     <div class="col-sm-10">
                         <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="2" maxlength="300"></textarea>
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Movie</button>
                     </div>
                 </div>
             </div>
@@ -91,8 +100,10 @@
 
             </div>
         </div>
+    </form>
 
-        <!-- review input -->
+    <!-- review input -->
+    <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('add_review') }}">
         <h5>Review this Movie</h5>
         <div class="form-row form-row-div">
             <div class="col-10 offset-1">
@@ -103,16 +114,11 @@
                     <div class="col-sm-10">
                         <textarea name="synopsis" class="form-control" id="textarea" rows="2"
                         placeholder="What did you like about this movie?"></textarea>
+                        
+                         <!-- submit button -->
+                        <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Review</button>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- submit and cancel buttons -->
-        <div class="form-row form-row-div text-center">
-            <div class="col-10 offset-2 text-center">
-                <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Movie</button>
-                <a href="{{ url_for('get_reviews') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
             </div>
         </div>
     </form>
