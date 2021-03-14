@@ -228,6 +228,8 @@ a.morelink {
     margin-top: 15px;
     background-color: #418a7b;
     color: #fafafa;
+    width: 150px;
+    height: 30px;
 }
 
 /* .reviews-title:before {
@@ -272,7 +274,7 @@ a.morelink {
 
 /* --------------- ADD & EDIT REVIEW PAGES --------------- */
 
-.review-form{
+.review-form {
     background-color: #3D3737;
     border-radius: 0.5rem;
     padding: 10px;
