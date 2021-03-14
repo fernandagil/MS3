@@ -12,7 +12,7 @@
     <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('add_review') }}">
         <!-- movie title -->
         <div class="form-row">
-            <div class="col-10">
+            <div class="col-10 offset-1">
                 <div class="row mb-3">
                     <label for="movie_name" class="col-sm-2 col-form-label">Movie Name</label>
                     <div class="col-sm-10">
@@ -21,50 +21,51 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2">
-                rate
-                <!-- <div class="row mb-3">
-                    rate
-                </div> -->
-            </div>
         </div>
 
         <!-- movie info -->
-        <div class="form-row">
-            <div class="col-6">
+        <div class="form-row form--movie-input">
+            <div class="col-10 offset-1">
                 <div class="row mb-1">
                     <label for="year" class="col-sm-2 col-form-label">Year</label>
                     <div class="col-sm-10">
-                        <input type="number" name="year" class="form-control" id="year" minlength="4"
+                        <input type="number" name="year" class="form-control" id="year" placeholder="Year" minlength="4"
                             maxlength="4" required>
                     </div>
                 </div>
                 <div class="row mb-1">
                     <label for="genre" class="col-sm-2 col-form-label">Genre</label>
                     <div class="col-sm-10">
-                        <input type="text" name="genre" class="form-control" id="genre" minlength="5"
+                        <input type="text" name="genre" class="form-control" id="genre" placeholder="Adventure, Comedy, Drama, Action..." minlength="5"
                             maxlength="30" required>
                     </div>
                 </div>
                 <div class="row mb-1">
                     <label for="director" class="col-sm-2 col-form-label">Director</label>
                     <div class="col-sm-10">
-                        <input type="text" name="director" class="form-control" id="director" minlength="5"
+                        <input type="text" name="director" class="form-control" id="director" placeholder="Director" minlength="5"
                             maxlength="80">
                     </div>
                 </div>
                 <div class="row mb-1">
                     <label for="main_cast" class="col-sm-2 col-form-label">Main Cast</label>
                     <div class="col-sm-10">
-                        <input type="text" name="main_cast" class="form-control" id="main_cast" minlength="5"
+                        <input type="text" name="main_cast" class="form-control" id="main_cast" placeholder="Main Actors" minlength="5"
                             maxlength="120">
                     </div>
                 </div>
                 <div class="row mb-1">
                     <label for="trailer" class="col-sm-2 col-form-label">Trailer</label>
                     <div class="col-sm-10">
-                        <input type="text" name="trailer" class="form-control" id="trailer" placeholder="Link to trailer" minlength="5"
+                        <input type="text" name="trailer" class="form-control" id="trailer" placeholder="Link to Trailer" minlength="5"
                             maxlength="120">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <label for="movie_image_link" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="movie_image_link" class="form-control" id="movie_image_link" placeholder="Add a link to Movie Poster" minlength="5"
+                            maxlength="80">
                     </div>
                 </div>
                 <div class="row mb-1">
@@ -74,13 +75,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-6">
 
-                <!-- add image -->
-                <img src="#" class="img-thumbnail">
-
                 <!-- add to watchlist -->
-                <div class="row watch-lists-collapse">
+                <!-- <div class="row watch-lists-collapse">
                     <div class="col-12">
                         <a class="btn btn-outline-light btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
                             aria-expanded="false" aria-controls="collapse-lists">
@@ -92,26 +91,34 @@
                             <button class="btn btn-outline-light btn-sm">watched</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
 
-        <!-- reviews section -->
-        <h6>Review this movie</h6>
-        <div class="form-row text-center">
-            <textarea name="synopsis" class="form-control" id="textarea" rows="2"
-                placeholder="What did you like about this movie?"></textarea>
+        <!-- review input -->
+        <h5>Review this Movie</h5>
+        <div class="form-row">
+            <div class="col-10 offset-1">
+                <div class="row mb-3">
+                    <div class="col-sm-2">
+                        rate
+                    </div>
+                    <div class="col-sm-10">
+                        <textarea name="synopsis" class="form-control" id="textarea" rows="2"
+                        placeholder="What did you like about this movie?"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- submit button -->
+        <!-- submit and cancel buttons -->
         <div class="form-row text-center">
             <div class="col-12 text-center">
-                <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add New Movie</button>
+                <button type="submit" class="btn btn-light btn-sm btn-submit-review">Edit this Movie</button>
+                <a href="{{ url_for('get_reviews') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
             </div>
         </div>
-
     </form>
-
 
 {% endblock %}
