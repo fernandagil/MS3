@@ -75,8 +75,7 @@ body {
 
 /* --------------- DISPLAY MOVIES CARDS --------------- */
 .card-img {
-    margin-top: 50px;
-    max-width: 120px;
+    max-width: 130px;
     border-radius: 0.5rem;
 }
 
