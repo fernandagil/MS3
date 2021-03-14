@@ -147,8 +147,12 @@ body {
 }
 
 .modal-img {
+    margin: 10px 0;
     min-width: 100px;
+    max-width: 300px;
     min-height: 100px;
+    max-height: 220px;
+    border-radius: 0.5rem;
 }
 
 .watch-lists-collapse {
