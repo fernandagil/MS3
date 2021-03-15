@@ -114,21 +114,15 @@ def add_movie():
             "trailer": request.form.get("trailer"),
             "synopsis": request.form.get("synopsis"),
             "movie_img_link": request.form.get("movie_img_link"),
-            "watchlist": request.form.get("watchlist"),
-            "created_by": session["user"],
-        }
-        review = {
-            "movie_name": request.form.get("movie_name"),
-            "review": request.form.get("review"),
             "created_by": session["user"],
         }
 
+
         mongo.db.movies.insert_one(movie)
-        mongo.db.reviews.insert_one(review)
         flash("Movie Successfully Added")
         return redirect(url_for("get_movies"))
 
-    return render_template("add_review.html")
+    return render_template("add_movie.html")
 
 
 @app.route("/edit_review/<movie_id>", methods=["GET", "POST"])
