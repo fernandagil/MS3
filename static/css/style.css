@@ -6,6 +6,10 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
+.content-row {
+    min-height: 300px;
+}
+
 /* --------------- NAVBAR --------------- */
 .nav-bar {
     color: #fafafa;
