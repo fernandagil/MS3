@@ -179,12 +179,12 @@ body {
     color: orange;
 }
 
-/* --------------- MOVIE MODALS --------------- */
-.movie-modal {
+/* --------------- MOVIE PAGES --------------- */
+.movie-page {
     padding: 20px;
 }
 
-.movie-modal-row-main {
+.movie-page-row-main {
     background-color: #bacfcc;
 }
 
@@ -214,7 +214,7 @@ body {
     font-size: 60%;
 }
 
-.movie-modal-row {
+.movie-page-row {
     padding: 20px;
 }
 
@@ -222,16 +222,12 @@ body {
     max-lines: 2;
 }
 
-.movie-modal-title {
+.movie-page-title {
     color: orange;
     padding: 30px 0;
 }
 
-.info-modal {
-    
-}
-
-.modal-img {
+.movie-page-img {
     margin: 10px 0;
     min-width: 150px;
     max-width: 100%;

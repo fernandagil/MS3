@@ -24,9 +24,34 @@ mongo = PyMongo(app)
 @app.route("/get_movies")
 def get_movies():
     movies = mongo.db.movies.find()
-    reviews = mongo.db.reviews.find()
 
     return render_template("movies.html", movies=movies)
+
+
+@app.route("/display_movie/<movie_id>", methods=["GET", "POST"])
+def display_movie(movie_id):
+
+    # Display information about that movie
+    movie_id = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+
+    if movie_id["movie_name"]:
+        reviews = list(mongo.db.reviews.find(
+            {"movie_name": movie_id["movie_name"]}))
+
+    # Leave a review about that movie
+    if request.method == "POST":
+        new_review = {
+            "movie_name": request.form.get("movie_name"),
+            "review_text": request.form.get("review_text"),
+            "created_by": session["user"],
+            # "created_when": session["date"] ???
+        }
+        mongo.db.movies.update({"_id": ObjectId(movie_id)}, new_review)
+        flash("Review Successfully Updated")
+        return redirect(url_for("get_movies"))
+
+    movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -116,8 +141,6 @@ def add_movie():
             "movie_img_link": request.form.get("movie_img_link"),
             "created_by": session["user"],
         }
-
-
         mongo.db.movies.insert_one(movie)
         flash("Movie Successfully Added")
         return redirect(url_for("get_movies"))
