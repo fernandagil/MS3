@@ -74,6 +74,12 @@ body {
     text-align: right;
 }
 
+.movie-journal-icon img{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
 /* --------------- FOOTER --------------- */
 .footer-container {
     color: #fafafa;
