@@ -21,12 +21,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_reviews")
-def get_reviews():
+@app.route("/get_movies")
+def get_movies():
     movies = mongo.db.movies.find()
     reviews = mongo.db.reviews.find()
 
-    return render_template("reviews.html", movies=movies)
+    return render_template("movies.html", movies=movies)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -99,7 +99,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     # where to redirect after logout (to login again or main page?)
-    return redirect(url_for("get_reviews")) 
+    return redirect(url_for("get_movies")) 
 
 
 @app.route("/add_movie", methods=["GET", "POST"])
@@ -126,7 +126,7 @@ def add_movie():
         mongo.db.movies.insert_one(movie)
         mongo.db.reviews.insert_one(review)
         flash("Movie Successfully Added")
-        return redirect(url_for("get_reviews"))
+        return redirect(url_for("get_movies"))
 
     return render_template("add_review.html")
 
@@ -150,7 +150,7 @@ def edit_review(movie_id):
         }
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
         flash("Movie Successfully Updated")
-        return redirect(url_for("get_reviews"))
+        return redirect(url_for("get_movies"))
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     return render_template("edit_review.html", movie=movie)
@@ -160,7 +160,7 @@ def edit_review(movie_id):
 def delete_review(movie_id):
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
     flash("Movie Successfully Deleted")
-    return redirect(url_for("get_reviews"))
+    return redirect(url_for("get_movies"))
 
 
 @app.route("/add_review", methods=["GET", "POST"])
@@ -172,7 +172,7 @@ def add_review():
         }
         mongo.db.reviews.insert_one(review)
         flash("Review Successfully Added")
-        return redirect(url_for("get_reviews"))
+        return redirect(url_for("get_movies"))
 
     return render_template("add_review.html")
 
