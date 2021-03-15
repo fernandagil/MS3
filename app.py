@@ -173,8 +173,8 @@ def edit_movie(movie_id):
     return render_template("edit_movie.html", movie=movie)
 
 
-@app.route("/delete_review/<movie_id>")
-def delete_review(movie_id):
+@app.route("/delete_movie/<movie_id>")
+def delete_movie(movie_id):
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
     flash("Movie Successfully Deleted")
     return redirect(url_for("get_movies"))
