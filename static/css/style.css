@@ -33,7 +33,6 @@ body {
     background-size: cover;
 }
 
-
 .pages-header-bg {
     background-image: url("../images/header.png");
     min-height: 10vh;
@@ -75,6 +74,44 @@ body {
     text-align: right;
 }
 
+/* --------------- FOOTER --------------- */
+.footer-container {
+    color: #fafafa;
+    background-color: #555555;
+    border-top: 4px dotted #fafafa;
+}
+
+.footer-element {
+  text-align: center;
+  vertical-align: bottom;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+.footer-element p {
+    margin-top: 5px;
+}
+
+.social-media li a i {
+  color: #fafafa;
+  background-color: #418a7b;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 12px 0;
+  border-radius: 20%;
+  line-height: 10px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.social-media li a i:hover {
+  color: #fafafa;
+  background-color: #f6b86f;
+}
 
 
 /* --------------- DISPLAY MOVIES CARDS --------------- */
