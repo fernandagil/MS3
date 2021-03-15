@@ -10,22 +10,17 @@
 {% block content %}
 
     <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('edit_review', movie_id=movie._id) }}">
-        <!-- movie title -->
-        <div class="form-row">
-            <div class="col-10">
-                <div class="row mb-3">
-                    <label for="movie_name" class="col-sm-2 col-form-label">Movie Name</label>
+        <div class="form-row form-row-div">
+            <div class="col-10 offset-1">
+
+                <!-- movie title -->
+                <div class="row mb-1">
+                    <label for="movie_name" class="col-sm-2 col-form-label"><h4>Movie Name</h4></label>
                     <div class="col-sm-10">
                         <input value="{{ movie.movie_name }}" type="text" name="movie_name" class="form-control form-control-lg" id="movie_name" minlength="3"
                             maxlength="100" required>
                     </div>
                 </div>
-            </div>
-            <div class="col-2">
-                rate
-                <!-- <div class="row mb-3">
-                    rate
-                </div> -->
             </div>
         </div>
 
@@ -63,60 +58,35 @@
                 <div class="row mb-1">
                     <label for="trailer" class="col-sm-2 col-form-label">Trailer</label>
                     <div class="col-sm-10">
-                        <input value="{{ movie.trailer }}" type="text" name="trailer" class="form-control" id="trailer" placeholder="Link to trailer" minlength="5"
+                        <input value="{{ movie.trailer }}" type="text" name="trailer" class="form-control" id="trailer" minlength="5"
                             maxlength="120">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <label for="movie_img_link" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                        <input value="{{ movie.movie_img_link }}" type="text" name="movie_img_link" class="form-control" id="movie_img_link" minlength="5"
+                            maxlength="150">
                     </div>
                 </div>
                 <div class="row mb-1">
                     <label for="synopsis" class="col-sm-2 col-form-label">Synopsis</label>
                     <div class="col-sm-10">
-                        <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="3" maxlength="300">
+                        <textarea name="synopsis" class="form-control" rows="3" maxlength="300">
                         {{- movie.synopsis -}}
                         </textarea>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-
-                <!-- add image -->
-                <img src="#" class="img-thumbnail">
-
-                <!-- add to watchlist -->
-                <div class="row watch-lists-collapse">
-                    <div class="col-12">
-                        <a class="btn btn-outline-light btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
-                            aria-expanded="false" aria-controls="collapse-lists">
-                            Add to my list
-                        </a>
-                        <div class="collapse" id="collapse-lists">
-                            <button class="btn btn-outline-light btn-sm">watching</button>
-                            <button class="btn btn-outline-light btn-sm">to watch</button>
-                            <button class="btn btn-outline-light btn-sm">watched</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
 
-        <!-- reviews section -->
-        <h6>Review this movie</h6>
-        <div class="form-row text-center">
-            <textarea name="review" class="form-control" id="textarea" rows="2"
-                placeholder="What did you like about this movie?">
-                {{- movie.review -}}
-            </textarea>
-        </div>
-
-        <!-- submit and cancel buttons -->
-        <div class="form-row text-center">
-            <div class="col-12 text-center">
+        <!-- Submit & Cancel buttons -->
+        <div class="form-row form-row-div">
+            <div class="col-10 offset-1 mx-auto">
                 <button type="submit" class="btn btn-light btn-sm btn-submit-review">Edit this Movie</button>
                 <a href="{{ url_for('get_movies') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
             </div>
         </div>
-
     </form>
-
 
 {% endblock %}
