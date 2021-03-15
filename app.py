@@ -148,8 +148,8 @@ def add_movie():
     return render_template("add_movie.html")
 
 
-@app.route("/edit_review/<movie_id>", methods=["GET", "POST"])
-def edit_review(movie_id):
+@app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
+def edit_movie(movie_id):
     if request.method == "POST":
         submit = {
             "movie_name": request.form.get("movie_name"),
@@ -170,7 +170,7 @@ def edit_review(movie_id):
         return redirect(url_for("get_movies"))
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-    return render_template("edit_review.html", movie=movie)
+    return render_template("edit_movie.html", movie=movie)
 
 
 @app.route("/delete_review/<movie_id>")
