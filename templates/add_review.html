@@ -74,9 +74,6 @@
                     <label for="synopsis" class="col-sm-2 col-form-label">Synopsis</label>
                     <div class="col-sm-10">
                         <textarea name="synopsis" class="form-control" placeholder="Synopsis" rows="2" maxlength="300"></textarea>
-                        
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Movie</button>
                     </div>
                 </div>
             </div>
@@ -100,11 +97,11 @@
 
             </div>
         </div>
-    </form>
 
-    <!-- review input -->
-    <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('add_review') }}">
-        <h5>Review this Movie</h5>
+        <div class="form-row form-row-div">
+            <h5>Review this Movie</h5>
+        </div>
+ 
         <div class="form-row form-row-div">
             <div class="col-10 offset-1">
                 <div class="row mb-3">
@@ -112,11 +109,12 @@
                         rate
                     </div>
                     <div class="col-sm-10">
-                        <textarea name="synopsis" class="form-control" id="textarea" rows="2"
+                        <textarea name="review" class="form-control" id="textarea" rows="2"
                         placeholder="What did you like about this movie?"></textarea>
-                        
+                    </div>
+                    <div class="col">
                          <!-- submit button -->
-                        <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Review</button>
+                        <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Movie</button>
                     </div>
                 </div>
             </div>

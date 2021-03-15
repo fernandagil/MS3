@@ -113,16 +113,19 @@ def add_movie():
             "synopsis": request.form.get("synopsis"),
             "movie_img_link": request.form.get("movie_img_link"),
             "watchlist": request.form.get("watchlist"),
+            "created_by": session["user"],
+        }
+        review = {
+            "movie_name": request.form.get("movie_name"),
             "review": request.form.get("review"),
             "created_by": session["user"],
-            # "created_when": session["date"] ???
         }
+
         mongo.db.movies.insert_one(movie)
+        mongo.db.reviews.insert_one(review)
         flash("Movie Successfully Added")
         return redirect(url_for("get_reviews"))
 
-    # categories = mongo.db.categories.find().sort("category_name", 1)
-    # return render_template("add_review.html", categories=categories)
     return render_template("add_review.html")
 
 
