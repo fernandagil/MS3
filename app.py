@@ -24,6 +24,12 @@ mongo = PyMongo(app)
 @app.route("/get_reviews")
 def get_reviews():
     movies = mongo.db.movies.find()
+    reviews = mongo.db.reviews.find()
+
+    if movie_name:
+        return
+
+
     return render_template("reviews.html", movies=movies)
 
 
