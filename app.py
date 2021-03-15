@@ -153,25 +153,23 @@ def edit_review(movie_id):
 
 @app.route("/delete_review/<movie_id>")
 def delete_review(movie_id):
-    movie = mongo.db.movies.remove({"_id": ObjectId(movie_id)})
+    mongo.db.movies.remove({"_id": ObjectId(movie_id)})
     flash("Movie Successfully Deleted")
     return redirect(url_for("get_reviews"))
 
 
-# @app.route("/add_review", methods=["GET", "POST"])
-# def add_review():
-#     if request.method == "POST":
-#         review = {
-#             "review": request.form.get("review"),
-#             "created_by": session["user"],
-#         }
-#         mongo.db.reviews.insert_one(review)
-#         flash("Movie Successfully Added")
-#         return redirect(url_for("get_reviews"))
+@app.route("/add_review", methods=["GET", "POST"])
+def add_review():
+    if request.method == "POST":
+        review = {
+            "review": request.form.get("review"),
+            "created_by": session["user"],
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("get_reviews"))
 
-#     # categories = mongo.db.categories.find().sort("category_name", 1)
-#     # return render_template("add_review.html", categories=categories)
-#     return render_template("add_review.html")
+    return render_template("add_review.html")
 
 
 if __name__ == "__main__":
