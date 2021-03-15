@@ -2,7 +2,7 @@
 {% block page %}
     <div class="col-12 pages-header-bg">
         <div class="col-12">
-            <h2 class="pages-header">Add Review</h2>
+            <h2 class="pages-header">Add New Movie</h2>
         </div>
     </div>
 {% endblock %}
@@ -10,24 +10,19 @@
 {% block content %}
 
     <form class="col-10 offset-1 review-form" method="POST" action="{{ url_for('add_movie') }}">
-
-        <!-- Cancel button -->
-        <div class="form-row">
-            <a href="{{ url_for('get_movies') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
-        </div>
-
-        <!-- movie title -->
-        <div class="form-row form-row-div">
-            <div class="col-10 offset-1 col-form-label">
-                <h4>Movie Name</h4>
-                <input type="text" name="movie_name" class="form-control form-control-lg" minlength="3"
-                    maxlength="100" required>
-            </div>
-        </div>
-
-        <!-- movie info -->
         <div class="form-row form-row-div">
             <div class="col-10 offset-1">
+
+                <!-- movie title -->
+                <div class="row mb-1">
+                    <label for="movie_name" class="col-sm-2 col-form-label"><h4>Movie Name</h4></label>
+                    <div class="col-sm-10">
+                        <input type="text" name="movie_name" class="form-control form-control-lg" placeholder="Movie Name" minlength="3" 
+                            maxlength="100" required>
+                    </div>
+                </div>
+
+                <!-- movie info -->
                 <div class="row mb-1">
                     <label for="year" class="col-sm-2 col-form-label">Year</label>
                     <div class="col-sm-10">
@@ -77,46 +72,14 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-6">
-
-                <!-- add to watchlist -->
-                <!-- <div class="row watch-lists-collapse">
-                    <div class="col-12">
-                        <a class="btn btn-outline-light btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
-                            aria-expanded="false" aria-controls="collapse-lists">
-                            Add to my list
-                        </a>
-                        <div class="collapse" id="collapse-lists">
-                            <button class="btn btn-outline-light btn-sm">watching</button>
-                            <button class="btn btn-outline-light btn-sm">to watch</button>
-                            <button class="btn btn-outline-light btn-sm">watched</button>
-                        </div>
-                    </div>
-                </div> -->
-
-            </div>
         </div>
 
         <div class="form-row form-row-div">
-            <h5>Review this Movie</h5>
-        </div>
- 
-        <div class="form-row form-row-div">
-            <div class="col-10 offset-1">
-                <div class="row mb-3">
-                    <div class="col-sm-2">
-                        rate
-                    </div>
-                    <div class="col-sm-10">
-                        <textarea name="review" class="form-control" id="textarea" rows="2"
-                        placeholder="What did you like about this movie?"></textarea>
-                    </div>
-                    <div class="col">
-                         <!-- submit button -->
-                        <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Movie</button>
-                    </div>
-                </div>
+            <div class="col-10 offset-1 mx-auto">
+
+                <!-- Submit & Cancel buttons -->
+                <button type="submit" class="btn btn-light btn-sm btn-submit-review">Add this Movie</button>
+                <a href="{{ url_for('get_movies') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Cancel</a>
             </div>
         </div>
     </form>
