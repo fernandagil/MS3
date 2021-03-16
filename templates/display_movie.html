@@ -1,55 +1,21 @@
 {% extends "base.html" %}
-{% block page %}
-    <div class="col-12 pages-header-bg">
-        <div class="col-12">
-            <h2 class="pages-header">{{ movie.movie_name }}</h2>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
 
 
     <div class="container-fluid movie-page">
         <div class="row movie-page-row">
-
-            <!-- edit / delete buttons ADMIN-->
-            {% if session.user|lower == "admin"|lower %}
-                <div class="card-header text-right">
-                    <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn"
-                        role="button">Edit</a>
-                    <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn"
-                        role="button">Delete</a>
-                </div>
-            {% endif %}
-        </div>
-
-
-        <!-- movie title -->
-        <div class="row movie-page-row">
-            <div class="col-10">
-                <h3 class="card-title">{{ movie.movie_name }}</h3>
-            </div>
-            <div class="col-2">
-                rate
-            </div>
-        </div>
-
-        <!-- movie info -->
-        <div class="row movie-page-row movie-page-row-main">
-            <div class="col-md-6 text-left align-self-center">
-                <p>
-                    <span class="movie-info">Year:</span> {{ movie.year }}<br>
-                    <span class="movie-info">Genre:</span> {{ movie.genre }}<br>
-                    <span class="movie-info">Director:</span> {{ movie.director }}<br>
-                    <span class="movie-info">Main Cast:</span> {{ movie.main_cast }}<br>
-                    <a href="{{ movie.year }}"><span class="movie-info movie-info-link">Watch Trailer</span></a>
-                </p>
-                <h6 class="movie-info">Synopsis</h6>
-                <p class="movie-synopsis comment more">{{ movie.synopsis }}</p>
-
-            </div>
             <div class="col-md-6">
+
+                <!-- Back to main page // edit & delete buttons ONLY ADMIN -->
+                <div class="movie-header-btns text-right">
+                    {% if session.user|lower == "admin"|lower %}
+                        <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn"
+                            role="button">Edit</a>
+                        <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn"
+                            role="button">Delete</a>
+                    {% endif %}
+                    <a href="{{ url_for('get_movies') }}" class="btn btn-light edit-delete-btn" role="button">Back to Home</a>
+                </div>
 
                 <!-- image -->
                 <img src="{{ movie.movie_img_link }}" class="movie-page-img" alt="{{ movie.name }}">
@@ -74,12 +40,29 @@
 
                 </div> -->
             </div>
+            <div class="col-md-6 text-left align-self-center order-lg-first">
+                <!-- movie title -->
+                <h2 class="movies-header">{{ movie.movie_name }}</h2>
+                
+                <!-- movie info -->
+                <p>
+                    <span class="movie-info">Year:</span> {{ movie.year }}<br>
+                    <span class="movie-info">Genre:</span> {{ movie.genre }}<br>
+                    <span class="movie-info">Director:</span> {{ movie.director }}<br>
+                    <span class="movie-info">Main Cast:</span> {{ movie.main_cast }}<br>
+                    <a href="{{ movie.year }}"><span class="movie-info movie-info-link">Watch Trailer</span></a>
+                </p>
+                <h6 class="movie-info">Synopsis</h6>
+                <p class="movie-synopsis comment more">{{ movie.synopsis }}</p>
+
+            </div>
         </div>
 
         <!-- reviews section -->
-        <h4 class="reviews-title"><span>Reviews</span></h4>
         <div class="row movie-page-row">
             <div class="col-12 col-md-10 offset-md-1">
+
+                <h4 class="reviews-title"><span>Reviews</span></h4>
 
                 <!-- user's input -->
                 {% if session.user %}

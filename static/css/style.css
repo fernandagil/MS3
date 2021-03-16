@@ -184,8 +184,29 @@ body {
     padding: 20px;
 }
 
-.movie-page-row-main {
+.movie-page-row {
     background-color: #bacfcc;
+    border-radius: 0.5rem;
+    margin-top: 25px;
+}
+
+.movies-header {
+    margin: 30px 0;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.movie-header-btns {
+    margin-top: 0px;
+
+    height: 30px;
+    padding: 4px;
+    font-size: 90%;
 }
 
 .movie-info {
@@ -210,7 +231,6 @@ body {
 
 .edit-delete-btn {
     padding: 2px;
-    width: 40px;
     font-size: 60%;
 }
 
@@ -229,9 +249,9 @@ body {
 
 .movie-page-img {
     margin: 10px 0;
-    min-width: 150px;
+    min-width: 200px;
     max-width: 100%;
-    max-height: 280px;
+    max-height: 350px;
     border-radius: 0.5rem;
 }
 
