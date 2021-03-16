@@ -68,13 +68,10 @@
                 {% if session.user %}
                 <form method="POST" action="{{ url_for('display_movie', movie_id=movie._id) }}">
                     <div class="form-group">
-                        <textarea name="synopsis" class="form-control" id="textarea" rows="2"
-                            placeholder="What did you like about this movie?"></textarea>
+                        <textarea name="user_review" class="form-control" id="textarea" rows="2"
+                            placeholder="What did you think about this movie?"></textarea>
                         <div class="row">
-                            <div class="col-6 text-left">
-                                rating in stars
-                            </div>
-                            <div class="col-6 text-right">
+                            <div class="col-12 text-right">
                                 <button class="btn btn-light btn-sm btn-submit-review">Submit my review</button>
                             </div>
                         </div>
@@ -88,14 +85,21 @@
                 {% endif %}
 
                 <!-- other user's reviews -->
-                {% if reviews|length > 0 %}
                 <div class="row comment-section">
-                    <div class="col-12 comment-text">
-                        <p class="comment more">{{ reviews.review }}</p>
-                        <small class="text-right comment-footer">By: {{ movie.created_by }} on {created when?}</small>
-                    </div>
+                    {% if reviews|length > 0 %}
+                        {% for review in reviews %}
+                            <div class="col-12 comment-text">
+                                <p class="comment more">{{ review.user_review }}</p>
+                                <small class="text-right comment-footer">By: {{ review.created_by }} on {created when?}</small>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="col-12 comment-text">
+                            <p>·  No reviews available for this movie yet  ·</p>
+                        </div>
+                    {% endif %}
                 </div>
-                {% endif %}
+
             </div>
         </div>
     </div>

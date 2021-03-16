@@ -41,17 +41,18 @@ def display_movie(movie_id):
     # Leave a review about that movie
     if request.method == "POST":
         new_review = {
-            "movie_name": request.form.get("movie_name"),
-            "review_text": request.form.get("review_text"),
-            "created_by": session["user"],
-            # "created_when": session["date"] ???
+            "movie_name": movie_element,
+            "user_review": request.form.get("user_review"),
+            "created_by": session["user"]
         }
+        mongo.db.reviews.insert_one(new_review)
+
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, new_review)
-        flash("Review Successfully Updated")
-        return redirect(url_for("get_movies"))
+        flash("Review Successfully Added")
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie)
+    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie) #does this just reload movie page with new review??
+
 
 
 @app.route("/register", methods=["GET", "POST"])
