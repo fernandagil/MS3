@@ -22,6 +22,10 @@ You can visit the deployed website [here](https://ms3-fernanda.herokuapp.com/).
 - As a user, I want to keep track of all the tv shows, movies and documentaries I’d like to watch.
 - As a user, I want to keep track of all the tv shows, movies and documentaries I already watched.
 - As a user, I want to see where I could watch the shows I'm interested in.
+- As a user, I want to be able to suggest new movies to add to the database.
+- As the site admin, I want to be able to add new movies.
+- As the site admin, I want to be able to edit movies.
+- As the site admin, I want to be able to delete movies.
 
 ---
  
