@@ -178,20 +178,6 @@ def delete_movie(movie_id):
     return redirect(url_for("get_movies"))
 
 
-@app.route("/add_review", methods=["GET", "POST"])
-def add_review():
-    if request.method == "POST":
-        review = {
-            "review": request.form.get("review"),
-            "created_by": session["user"],
-        }
-        mongo.db.reviews.insert_one(review)
-        flash("Review Successfully Added")
-        return redirect(url_for("get_movies"))
-
-    return render_template("add_review.html")
-
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
