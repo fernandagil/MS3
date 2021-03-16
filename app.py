@@ -46,13 +46,10 @@ def display_movie(movie_id):
             "created_by": session["user"]
         }
         mongo.db.reviews.insert_one(new_review)
-
-        mongo.db.movies.update({"_id": ObjectId(movie_id)}, new_review)
         flash("Review Successfully Added")
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
     return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie) #does this just reload movie page with new review??
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -138,8 +135,8 @@ def add_movie():
             "director": request.form.get("director"),
             "main_cast": request.form.get("main_cast"),
             "trailer": request.form.get("trailer"),
-            "synopsis": request.form.get("synopsis"),
             "movie_img_link": request.form.get("movie_img_link"),
+            "synopsis": request.form.get("synopsis"),
             "created_by": session["user"],
         }
         mongo.db.movies.insert_one(movie)
@@ -159,8 +156,8 @@ def edit_movie(movie_id):
             "director": request.form.get("director"),
             "main_cast": request.form.get("main_cast"),
             "trailer": request.form.get("trailer"),
+            "movie_img_link": request.form.get("movie_img_link"),
             "synopsis": request.form.get("synopsis"),
-            "movie_image_link": request.form.get("movie_image_link"),
             "watchlist": request.form.get("watchlist"),
             "review": request.form.get("review"),
             "created_by": session["user"],
