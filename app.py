@@ -32,11 +32,11 @@ def get_movies():
 def display_movie(movie_id):
 
     # Display information about that movie
-    movie_id = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+    movie_element = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
 
-    if movie_id["movie_name"]:
+    if movie_element["movie_name"]:
         reviews = list(mongo.db.reviews.find(
-            {"movie_name": movie_id["movie_name"]}))
+            {"movie_name": movie_element["movie_name"]}))
 
     # Leave a review about that movie
     if request.method == "POST":
@@ -51,7 +51,7 @@ def display_movie(movie_id):
         return redirect(url_for("get_movies"))
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews)
+    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie)
 
 
 @app.route("/register", methods=["GET", "POST"])
