@@ -56,7 +56,7 @@ def display_movie(movie_id):
 def search_movie():
     query = request.form.get("query")
     movies = list(mongo.db.movies.find({"$text": {"$search": query}}))
-    return render_template("movies.html", movies=movies)
+    return render_template("search_movie.html", movies=movies)
 
 
 @app.route("/register", methods=["GET", "POST"])

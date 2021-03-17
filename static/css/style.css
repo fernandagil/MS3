@@ -8,6 +8,7 @@ body {
 
 .content-row {
     min-height: 80vh;
+    
 }
 
 /* --------------- NAVBAR --------------- */
@@ -36,6 +37,9 @@ body {
 .pages-header-bg {
     background-image: url("../images/header.png");
     min-height: 10vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -351,6 +355,28 @@ a.morelink {
     margin: 20px 0;
 }
 
+/* --------------- SEARCH PAGE --------------- */
+.search-container {
+}
+
+.search-result {
+    background-color: #555555;
+    border-radius: 0.5rem;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.search-result h4 {
+    font-size: 36px;
+    color: #fafafa;
+}
+
+.search-img {
+    max-height: 250px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
 
 
 /* --------------- MEDIA QUERIES --------------- */
@@ -368,6 +394,9 @@ a.morelink {
         font-size: 4.5rem;
         letter-spacing: 5px;
         text-align: right;
+    }
+    .search-result h4 {
+        font-size: 18px;
     }
 }
 

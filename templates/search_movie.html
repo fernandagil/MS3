@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block page %}
+    <div class="col-12 pages-header-bg">
+        <div class="col-12">
+            <h2 class="pages-header">Search Results</h2>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="col-10 offset-1 col-md-6 offset-md-3 search-container">
+        <div class="row search-result">
+            {% for movie in movies %}
+                <div class="col-6 align-self-center">
+                    <img src="{{ movie.movie_img_link }}" class="search-img">
+                </div>
+                <div class="col-6 align-self-center">
+                    <h4 class="card-title">{{ movie.movie_name }}</h4>
+                    
+                    <!-- Display Movie button -->
+                    <a href="{{ url_for('display_movie', movie_id=movie._id) }}" class="btn plus-btn" role="button"
+                        data-target="#id_{{ movie._id }}"><i class="far fa-plus-square"></i></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
