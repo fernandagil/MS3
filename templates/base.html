@@ -48,10 +48,11 @@
                             <a class="nav-link" href="{{ url_for('register') }}">Register</a>
                         </li>
                     {% endif %}
-
                     <li>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search movie" aria-label="Search">
+
+                        <!-- Search -->
+                        <form class="form-inline my-2 my-lg-0" action="{{ url_for('search_movie') }}" method="POST">
+                            <input class="form-control mr-sm-2" type="text" name="query" id="query" minlength="3" placeholder="Search movie" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </li>
