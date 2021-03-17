@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_B14UevRtlfRgzRXYT3bx2");
+        })();
+    </script>
     {% block styles %}
     {% endblock %}
 
@@ -64,29 +72,32 @@
 
     <main>
         <div class="container-fluid">
+
+            <!-- header -->
             <div class="row">
                 {% block page %}
                 {% endblock %}
             </div>
-
+            
+            <!-- main content -->
             <div class="row bg-warning py-3 px-md-3 div-bg content-row">
                 {% block content %}
                 {% endblock %}
             </div>
-        </div>
 
-        <section>
-            <!-- flash messages -->
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="row flashes">
-                            <h5>{{ message }}</h5>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-        </section>
+            <section>
+                <!-- flash messages -->
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="row flashes">
+                                <h5>{{ message }}</h5>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </section>
+        </div>
     </main>
 
     <!-- footer -->
@@ -123,6 +134,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
     {% block scripts %}
     {% endblock %}
     

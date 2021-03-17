@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Londrina+Shadow&family=Montserrat&family=Pacifico&family=Poiret+One&family=Raleway&family=Ribeye+Marrow&display=swap');
 
 body {
+    margin: 0;
+    padding: 0;
     text-align: center;
     font-family: "Raleway", sans-serif;
 }
@@ -93,10 +95,10 @@ body {
 }
 
 .footer-element {
-  text-align: center;
-  vertical-align: bottom;
-  margin: 14px 0;
-  font-size: 14px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 14px 0;
+    font-size: 14px;
 }
 
 .footer-element p {
@@ -104,24 +106,24 @@ body {
 }
 
 .social-media li a i {
-  color: #fafafa;
-  background-color: #418a7b;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  padding: 12px 0;
-  border-radius: 20%;
-  line-height: 10px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
+    color: #fafafa;
+    background-color: #418a7b;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 12px 0;
+    border-radius: 20%;
+    line-height: 10px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 .social-media li a i:hover {
-  color: #fafafa;
-  background-color: #f6b86f;
+    color: #fafafa;
+    background-color: #f6b86f;
 }
 
 
@@ -361,6 +363,7 @@ a.morelink {
 
 .search-result {
     background-color: #555555;
+    color: #fafafa;
     border-radius: 0.5rem;
     padding: 20px;
     margin: 10px 0;
@@ -376,6 +379,14 @@ a.morelink {
     width: auto;
     max-width: 100%;
     border-radius: 0.5rem;
+}
+
+.suggestion-form {
+    margin: 30px 5px;
+}
+
+.suggestion-item {
+    margin-top: 10px;
 }
 
 
