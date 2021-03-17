@@ -7,7 +7,7 @@ body {
 }
 
 .content-row {
-    min-height: 300px;
+    min-height: 80vh;
 }
 
 /* --------------- NAVBAR --------------- */
@@ -152,10 +152,6 @@ body {
 
 
 
-
-.main-bg {
-    background-color: orange;
-}
 
 .flashes {
     color: #555555;
