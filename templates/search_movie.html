@@ -9,20 +9,32 @@
 
 {% block content %}
     <div class="col-10 offset-1 col-md-6 offset-md-3 search-container">
-        <div class="row search-result">
-            {% for movie in movies %}
-                <div class="col-6 align-self-center">
-                    <img src="{{ movie.movie_img_link }}" class="search-img">
-                </div>
-                <div class="col-6 align-self-center">
-                    <h4 class="card-title">{{ movie.movie_name }}</h4>
-                    
-                    <!-- Display Movie button -->
-                    <a href="{{ url_for('display_movie', movie_id=movie._id) }}" class="btn plus-btn" role="button"
-                        data-target="#id_{{ movie._id }}"><i class="far fa-plus-square"></i></a>
-                </div>
-            {% endfor %}
+        {% if movies|length > 0 %}
+            <div class="row search-result">
+                {% for movie in movies %}
+                    <div class="col-6 align-self-center">
+                        <img src="{{ movie.movie_img_link }}" class="search-img">
+                    </div>
+                    <div class="col-6 align-self-center">
+                        <h4 class="card-title">{{ movie.movie_name }}</h4>
+                        
+                        <!-- Display Movie button -->
+                        <a href="{{ url_for('display_movie', movie_id=movie._id) }}" class="btn plus-btn" role="button"
+                            data-target="#id_{{ movie._id }}"><i class="far fa-plus-square"></i></a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="row search-result">
+                <p>Sorry, nothing matches your search, try again!</p>
+            </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-10 offset-1 text-right">
+                <a href="{{ url_for('get_movies') }}" class="btn btn-light btn-sm btn-submit-review" role="button">Back to Home</a>
+            </div>
         </div>
     </div>
+
 
 {% endblock %}
