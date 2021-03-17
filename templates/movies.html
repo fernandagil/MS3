@@ -12,20 +12,22 @@
 {% block content %}
 
     <div class="col-12 card-group">
-        {% for movie in movies %}
-        <div class="card movie-card-display">
-            <div class="card-body">
-                <img src="{{ movie.movie_img_link }}" class="card-img">
-                <h6 class="card-title">{{ movie.movie_name }}</h6>
-            </div>
-            <div class="card-footer">
+        <div class="row">
+            {% for movie in movies %}
+                <div class="col-3 col-md-2 col-lg-1 card movie-card-display">
+                    <div class="card-body">
+                        <img src="{{ movie.movie_img_link }}" class="card-img">
+                        <h6 class="card-title">{{ movie.movie_name }}</h6>
+                    </div>
+                    <div class="card-footer">
 
-                <!-- Display Movie button -->
-                <a href="{{ url_for('display_movie', movie_id=movie._id) }}" class="btn plus-btn" role="button" data-target="#id_{{ movie._id }}"><i class="far fa-plus-square"></i></a>
-            </div>
+                        <!-- Display Movie button -->
+                        <a href="{{ url_for('display_movie', movie_id=movie._id) }}" class="btn plus-btn" role="button" data-target="#id_{{ movie._id }}"><i class="far fa-plus-square"></i></a>
+                        
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-   
-        {% endfor %}
     </div>
 
 {% endblock %}
