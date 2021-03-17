@@ -52,7 +52,7 @@ def display_movie(movie_id):
     return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie) #does this just reload movie page with new review??
 
 
-@app.route("/search_movie")
+@app.route("/search_movie", methods=["GET", "POST"])
 def search_movie():
     query = request.form.get("query")
     movies = list(mongo.db.movies.find({"$text": {"$search": query}}))
