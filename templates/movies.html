@@ -28,33 +28,33 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="row suggestion-container text-container">
-            <div class="col-12">
-                <p>Let us know if you're missing any movies!</p>
-                <form onsubmit="return sendMail(this);" class="suggestion-form">
-                    <div class="row">
-                        <div class="col-6 suggestion-item">
-                            <input name="name" type="text" class="form-control form-control-sm" placeholder="Your Name" required>
-                        </div>
-                        <div class="col-6 suggestion-item">
-                            <input name="emailaddress" type="email" class="form-control form-control-sm" placeholder="Your Email"
-                                required>
-                        </div>
-                        <div class="col-12 suggestion-item">
-                            <input name="moviesuggestion" type="text" class="form-control form-control-sm"
-                                placeholder="Your Movie Suggestion" required>
-                        </div>
-                        <div class="col-12 suggestion-item">
-                            <button type="submit" class="btn btn-outline-light green-btn">Submit</button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-
-
-        </div>
     </div>
+
+    <div class="col-12 col-md-8 offset-2 suggestion-container text-container">
+        <p>Let us know if you're missing any movies!</p>
+        <form onsubmit="return sendMail(this);" class="suggestion-form">
+            <div class="row">
+                <div class="col-6 suggestion-item">
+                    <input name="name" type="text" class="form-control form-control-sm" placeholder="Your Name" required>
+                </div>
+                <div class="col-6 suggestion-item">
+                    <input name="emailaddress" type="email" class="form-control form-control-sm" placeholder="Your Email"
+                        required>
+                </div>
+                <div class="col-12 suggestion-item">
+                    <input name="moviesuggestion" type="text" class="form-control form-control-sm"
+                        placeholder="Your Movie Suggestion" required>
+                </div>
+                <div class="col-12 suggestion-item">
+                    <button type="submit" class="btn btn-outline-light green-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
+    </div>
+
     <!-- <div class="row">
     <div class="col-12 col-md-8 offset-md-2">
         <div class="row suggestion-container">
