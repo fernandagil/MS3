@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="col-10 offset-1 col-md-6 offset-md-3 search-container">
+    <div class="col-10 offset-1 col-md-6 offset-md-3">
         {% if movies|length > 0 %}
             <div class="row search-result">
                 {% for movie in movies %}
@@ -25,9 +25,9 @@
                 {% endfor %}
             </div>
         {% else %}
-            <div class="row search-result">
+            <div class="row suggestion-container">
                 <p>Sorry, nothing matches your search! <br>
-                Send us the movie you'd like to add to the database</p>
+                    Let us know which movie you're missing!</p>
                 
                 <form onsubmit="return sendMail(this);" class="suggestion-form">
                     <div class="row">

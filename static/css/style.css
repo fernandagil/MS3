@@ -381,8 +381,16 @@ a.morelink {
     border-radius: 0.5rem;
 }
 
+.suggestion-container {
+    background-color: #555555;
+    color: #fafafa;
+    border-radius: 0.5rem;
+    padding: 20px;
+    margin: 30px 0;
+}
+
 .suggestion-form {
-    margin: 30px 5px;
+    margin: 30px 0;
 }
 
 .suggestion-item {
