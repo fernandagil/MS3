@@ -90,6 +90,11 @@ body {
 
 /* --------------- FOOTER --------------- */
 .footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
     border-top: 4px dotted #fafafa;
 }
 
@@ -340,6 +345,8 @@ a.morelink {
     border-radius: 0.5rem;
     padding: 10px;
     padding: 30px;
+    margin-bottom: 120px;
+    margin-top: 30px;
 }
 
 .form-movie-input {
@@ -347,7 +354,8 @@ a.morelink {
 }
 
 .form-row-div {
-    margin: 20px 0;
+    margin-top: 20px;
+
 }
 
 /* --------------- SEARCH PAGE --------------- */
@@ -375,7 +383,8 @@ a.morelink {
 .suggestion-container {
     border-radius: 0.5rem;
     padding: 20px;
-    margin: 30px 0;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .suggestion-form {
@@ -395,7 +404,7 @@ a.morelink {
         font-size: 90%;
     }
     .review-form{
-        padding: 4px;
+        padding: 10px 0;
     }
     .home-header {
         margin: 70px 0;
