@@ -107,6 +107,7 @@ body {
 /* --------------- FOOTER --------------- */
 .footer-container {
     position: fixed;
+    height: 60px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -117,7 +118,7 @@ body {
 .footer-element {
     text-align: center;
     vertical-align: bottom;
-    margin: 14px 0;
+    margin: 10px 0;
     font-size: 14px;
 }
 
@@ -189,7 +190,7 @@ body {
 .card-title {
     margin-top: 10px;
     margin-bottom: 0;
-        font-size: small;
+    font-size: small;
 }
 
 .card-footer {
@@ -223,6 +224,7 @@ body {
 /* --------------- MOVIE PAGES --------------- */
 .movie-page {
     padding: 20px;
+    margin-bottom: 120px;
 }
 
 .movie-page-row {

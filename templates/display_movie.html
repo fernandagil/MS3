@@ -19,34 +19,9 @@
 
                 <!-- image -->
                 <img src="{{ movie.movie_img_link }}" class="movie-page-img" alt="{{ movie.name }}">
-
-                <!-- watchlist -->
-                <!-- <div class="watch-lists-collapse">
-                    <a class="btn btn-outline-dark btn-sm" data-toggle="collapse" href="#collapse-lists" role="button"
-                        aria-expanded="false" aria-controls="collapse-lists">
-                        Add to my list
-                    </a>
-                    <div class="collapse input-group" id="collapse-lists">
-                        {% if session.user %}
-                            <label class="btn btn-outline-dark btn-sm">
-                                <input type="checkbox" name="watching_list" id="watching_list" checked> Watching
-                            </label>
-                            <label class="btn btn-outline-dark btn-sm">
-                                <input type="checkbox" name="to_watch_list" id="to_watch_list"> To Watch
-                            </label>
-                            <label class="btn btn-outline-dark btn-sm">
-                                <input type="checkbox" name="watched_list" id="watched_list"> Watched
-                            </label>
-                        {% else %}
-                        <p>You need to
-                            <a href="{{ url_for('login') }}">login</a> or
-                            <a href="{{ url_for('register') }}">register</a> first!</p>
-                        {% endif %}
-                    </div>
-
-                </div> -->
             </div>
             <div class="col-md-6 text-left align-self-center order-md-first">
+                
                 <!-- movie title -->
                 <h2 class="movies-header">{{ movie.movie_name }}</h2>
                 
