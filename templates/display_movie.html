@@ -7,14 +7,14 @@
             <div class="col-md-6">
 
                 <!-- Back to main page // edit & delete buttons ONLY ADMIN -->
-                <div class="movie-header-btns text-right">
+                <div class="div-header text-right">
                     {% if session.user|lower == "admin"|lower %}
-                        <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn"
+                        <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn btn-light orange-btn"
                             role="button">Edit</a>
-                        <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn btn-light edit-delete-btn"
+                        <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn btn-light orange-btn"
                             role="button">Delete</a>
                     {% endif %}
-                    <a href="{{ url_for('get_movies') }}" class="btn btn-light edit-delete-btn" role="button">Back to Home</a>
+                    <a href="{{ url_for('get_movies') }}" class="btn btn-light orange-btn" role="button">Back to Home</a>
                 </div>
 
                 <!-- image -->

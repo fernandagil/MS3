@@ -10,6 +10,13 @@
 {% block content %}
 
     <form class="col-10 offset-1 review-form text-container" method="POST" action="{{ url_for('edit_movie', movie_id=movie._id) }}">
+        
+        <!-- Cancel & Delete buttons -->
+        <div class="col-12 div-header text-right">
+            <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn btn-light orange-btn" role="button">Delete</a>
+            <a href="{{ url_for('get_movies') }}" class="btn btn-light orange-btn" role="button">Cancel and return to Home</a>
+        </div>
+
         <div class="form-row form-row-div">
             <div class="col-10 offset-1">
 
@@ -76,11 +83,10 @@
             </div>
         </div>
 
-        <!-- Submit & Cancel buttons -->
+        <!-- Submit button -->
         <div class="form-row form-row-div">
             <div class="col-10 offset-1 mx-auto">
                 <button type="submit" class="btn btn-light btn-sm green-btn">Edit this Movie</button>
-                <a href="{{ url_for('get_movies') }}" class="btn btn-light btn-sm green-btn" role="button">Cancel</a>
             </div>
         </div>
     </form>

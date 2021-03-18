@@ -22,6 +22,14 @@ body {
     background-color: #555555;
 }
 
+.div-header {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    height: 30px;
+    padding: 4px;
+    font-size: 90%;
+}
+
 /* --------------- NAVBAR --------------- */
 .nav-bar {
     border-bottom: 4px dotted #fafafa;
@@ -130,6 +138,26 @@ body {
     background-color: #f6b86f;
 }
 
+/* --------------- BUTTONS --------------- */
+.green-btn {
+    background-color: #418a7b;
+    color: #fafafa;
+    width: 150px;
+}
+
+.orange-btn {
+    padding: 4px;
+    font-size: 70%;
+    min-width: 70px;
+    background-color: #F6B86F;
+    color: #fafafa;
+}
+
+.plus-btn {
+    color: #F6B86F;
+    font-size: 1.2rem;
+}
+
 
 /* --------------- DISPLAY MOVIES CARDS --------------- */
 .card-body {
@@ -155,9 +183,6 @@ body {
     border-top: transparent;
 }
 
-.plus-btn {
-    color: #F6B86F;
-}
 
 
 
@@ -208,12 +233,7 @@ body {
     text-align: left;
 }
 
-.movie-header-btns {
-    margin-top: 0px;
-    height: 30px;
-    padding: 4px;
-    font-size: 90%;
-}
+
 
 .movie-info {
     font-weight: bold;
@@ -235,10 +255,7 @@ body {
     border-bottom: none;
 }
 
-.edit-delete-btn {
-    padding: 2px;
-    font-size: 60%;
-}
+
 
 .movie-page-row {
     padding: 20px;
@@ -293,11 +310,6 @@ a.morelink {
 
 
 
-.green-btn {
-    background-color: #418a7b;
-    color: #fafafa;
-    width: 150px;
-}
 
 /* .reviews-title:before {
     content: "";
