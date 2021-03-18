@@ -207,7 +207,6 @@ body {
 
 .movie-header-btns {
     margin-top: 0px;
-
     height: 30px;
     padding: 4px;
     font-size: 90%;
@@ -291,12 +290,10 @@ a.morelink {
 
 
 
-.btn-submit-review {
-    margin-top: 15px;
+.green-btn {
     background-color: #418a7b;
     color: #fafafa;
     width: 150px;
-    height: 30px;
 }
 
 /* .reviews-title:before {
