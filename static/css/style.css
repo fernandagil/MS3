@@ -158,6 +158,13 @@ body {
     font-size: 1.2rem;
 }
 
+.profile-btn {
+    padding: 6px;
+    min-width: 80px;
+    background-color: #418a7b;;
+    color: #fafafa;
+}
+
 
 /* --------------- DISPLAY MOVIES CARDS --------------- */
 .card-body {
@@ -231,6 +238,11 @@ body {
     font-size: 4rem;
     letter-spacing: 5px;
     text-align: left;
+}
+
+.profile-header {
+    margin: 40px;
+    height: 30px;
 }
 
 

@@ -10,11 +10,22 @@
 {% block content %}
 
     <div class="col-10 offset-1 col-md-8 offset-md-2 text-container">
+        
+        <!-- menu -->
+        <div class="row profile-header">
+            <div class="col-12 text-right">
+                <a href="#" class="btn btn-light profile-btn" role="button">Settings</a>
+                <a href="{{ url_for('get_movies') }}" class="btn btn-light profile-btn" role="button">Home</a>
+
+            
+            </div>
+        </div>
+
         <div class="form-row form-row-div">
             <div class="col-10 offset-1">
 
                 <h3 class="center-align light-blue-text text-darken-4">
-                    Welcome {{ username }}!
+                    Your movie reviews
                 </h3>
             </div>
         </div>
