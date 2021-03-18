@@ -8,6 +8,13 @@
 {% endblock %}
 
 {% block content %}
+
+    <!-- Cancel & Delete buttons -->
+    <div class="col-12 div-header text-right">
+        <a href="{{ url_for('get_movies') }}" class="btn btn-light orange-btn" role="button">Back to Home</a>
+    </div>
+
+    <!-- Search Results -->
     <div class="col-10 offset-1 col-md-6 offset-md-3">
         {% if movies|length > 0 %}
             <div class="row search-result text-container">
@@ -47,11 +54,6 @@
                 </form>
             </div>
         {% endif %}
-        <div class="row">
-            <div class="col-10 offset-1 text-right">
-                <a href="{{ url_for('get_movies') }}" class="btn btn-light btn-sm green-btn" role="button">Back to Home</a>
-            </div>
-        </div>
     </div>
 
 {% endblock %}
