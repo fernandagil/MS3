@@ -70,6 +70,21 @@
 
     </header>
 
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row text-left">
+                        <div class="col-10 offset-1 flashes">
+                            <h6>{{ message }}</h6>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
     <main>
         <div class="container-fluid">
 
@@ -84,19 +99,6 @@
                 {% block content %}
                 {% endblock %}
             </div>
-
-            <section>
-                <!-- flash messages -->
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="row flashes">
-                                <h5>{{ message }}</h5>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
-            </section>
         </div>
     </main>
 

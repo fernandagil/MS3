@@ -16,6 +16,14 @@ body {
 }
 
 /* --------------- BASE TEMPLATE --------------- */
+.flashes {
+    color: #555555;
+    background-color: #fafafa;
+    padding: 5px;
+    border: 4px double #F6B86F;
+    border-radius: 0.5rem;
+    margin: 5px;
+}
 
 .text-container {
     color: #fafafa;
@@ -193,13 +201,6 @@ body {
 
 
 
-
-
-.flashes {
-    color: #555555;
-    background-color: #418a7b;
-    padding: 30px;
-}
 
 .form-login {
     margin-top: 45px;
