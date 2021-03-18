@@ -1,6 +1,7 @@
-# MS3
- 
-![]()
+# Movie Journal
+![Movie Journal](readme-files/ms3-amiresponsive.png)
+
+Movie Journal is the place where you can keep track of your favourite (and least favourite) movies by leaving reviews.
  
 You can visit the deployed website [here](https://ms3-fernanda.herokuapp.com/).
  
@@ -9,24 +10,36 @@ You can visit the deployed website [here](https://ms3-fernanda.herokuapp.com/).
 ## 1. UX
  
 ### 1.1. Project Goals
+The project's main goal is to have a place where registered users can create, read, update and delete movie reviews.
 
+- They can create a review by clicking on any movie
+- They can read a review by clicking on any movie. This can be done by unregistered users as well
+- They can update a review by clicking 'edit' on the review in their *Profile Page*
+- They can delete a review by clicking 'delete' on the review in their *Profile Page*
  
 ### 1.2. User Stories
+###### General Users
 - As a user, I want to immediately understand the purpose of the site.
-- As a user, I want to be able to leave a review about a tv show I liked or disliked.
-- As a user, I want to be able to edit the reviews I alredy created.
-- As a user, I want to be able to delete the reviews I created.
-- As a user, I want to be able to see reviews that other users have created.
-- As a user, I want to be able to search for a movie or genre.
-- As a user, I want to keep track of all the tv shows, movies and documentaries I’m watching at the moment.
-- As a user, I want to keep track of all the tv shows, movies and documentaries I’d like to watch.
-- As a user, I want to keep track of all the tv shows, movies and documentaries I already watched.
-- As a user, I want to see where I could watch the shows I'm interested in.
+- As a user, I want to be able to see reviews that other users have created about a movie.
+- As a user, I want to be able to search for a movie.
 - As a user, I want to be able to suggest new movies to add to the database.
-- As the site admin, I want to be able to add new movies.
-- As the site admin, I want to be able to edit movies.
-- As the site admin, I want to be able to delete movies.
+- As a user, I want to see a picture next to the movie title so I can recognise the movie quickly.
+- As a user, I want to be able to register easily.
 
+###### Registered Users
+- As a registered user, I want to be able to write a review about a movie.
+- As a registered user, I want to be able to edit or delete a review I created.
+
+###### Project Owner / Admin
+- As the project owner, I want to be able to add, read, update, and delete movies from the database.
+- As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
+
+### 1.3. Design Choices
+- **Fonts**: I chose Raleway as I feel it was an aesthetic and readable font. To emphasize some headers I used Londrina Shadow, since it gave me the feel of a hand drawn header in a diary. Both fonts were imported from (Google Fonts)[https://fonts.google.com/]
+- **Movie Posters**: When adding the image of a movie to the database, I filtered the search by usage rights: *Free to share and use*
+- **Colours**: to keep consistency through the project, I first selected an [image](https://www.freepik.com/free-vector/retro-background-with-film-camera_1023417.htm#page=2&query=movie+background&position=30) to be the main image in the *home page*  and from that image I created the colour palette.
+ 
+![colour palette](readme-files/ms3-palette.png)
 ---
  
 ## 2. Features
