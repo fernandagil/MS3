@@ -29,6 +29,7 @@ The project's main goal is to have a place where registered users can create, re
 ###### Registered Users
 - As a registered user, I want to be able to write a review about a movie.
 - As a registered user, I want to be able to edit or delete a review I created.
+- As a registered user, I want to receive feedback when I made a change successfully.
 
 ###### Project Owner / Admin
 - As the project owner, I want to be able to add, read, update, and delete movies from the database.
@@ -43,10 +44,57 @@ The project's main goal is to have a place where registered users can create, re
 ---
  
 ## 2. Features
- 
+
 ### 2.1. Existing features
+All users can:
+- view all movies
+- view all movie reviews
+
+Registered users can:
+- Add, edit and delete their movie reviews
+
+The admin can:
+- Add, edit and delete their movie reviews
+- Add, edit and delete movies to the database
+
+
+### 2.2. CRUD functionality
  
-### 2.2. Potential Features
+**Site wide**:
+- **NavBar**: gives consistency and allow users to navigate the page easily. This includes:
+-- **Project's logo**: allows users to identify where they are.
+-- **Navigation Menu**: allows users to navigate the site in an easy and intuitive way.
+-- **Search Bar**: allows users to search for a movie. This redirects the user to the **Search Results Page**.
+
+**Search Results Page**:
+- **Results**: shows the users the results for their search. If no results are found, the user gets a Suggestion Form
+- **Suggestion Form**: allows users to participate in the project by sending movie suggestions that the Admin can add to the database.
+
+**Home Page**:
+- **Page Title**: allows users to identify the project's purpose.
+- **Movies**: allows users to see the movies in the database (latests=?????). To see more informationa about a specific movie the user can click on the **+** button on any movie and this redirects the user to the **Movie Page**.
+- **Suggestion Form**: allows users to participate in the project by sending movie suggestions that the Admin can add to the database.
+
+**Movie Page**:
+- **Movie Information**: allows users to know more about a specific movie. Every Movie Page includes:
+-- **Movie Title**
+-- **Movie Poster**
+-- **Year**
+-- **Genre**
+-- **Director**
+-- **Main Cast**
+-- **Link to Trailer**
+-- **Synopsis**
+- **Reviews Section**: allows users to see the reviews for that movie. It also allows registered users to leave their own reviews about that movie.
+
+**Register Page**:
+ - **Registration Form**: allows users to sign up by providing some information.
+ 
+ **Log In Page**:
+ - **Log In Form**: allows users to log in with the information they provided in their registration form.
+ 
+
+### 2.3. Potential Features
  
 ---
  
