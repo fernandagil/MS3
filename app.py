@@ -52,6 +52,31 @@ def display_movie(movie_id):
     return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie) #does this just reload movie page with new review??
 
 
+
+# def display_movie(movie_id):
+
+#     # Display information about that movie
+#     movie_element = mongo.db.movies.find({"_id": ObjectId(movie_id)}, {"movie_name": movie_element["movie_name"]})
+
+#     if movie_element:
+#         reviews = list(mongo.db.reviews.find(
+#             {"movie_id": movie_element}))
+
+#     # Leave a review about that movie
+#     if request.method == "POST":
+#         new_review = {
+#             "movie_id": movie_element,
+#             "movie_name": movie_name,
+#             "user_review": request.form.get("user_review"),
+#             "created_by": session["user"]
+#         }
+#         mongo.db.reviews.insert_one(new_review)
+#         flash("Review Successfully Added")
+
+#     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+#     return render_template("display_movie.html", movie_id=movie_id, reviews=reviews) #does this just reload movie page with new review??
+
+
 @app.route("/search_movie", methods=["GET", "POST"])
 def search_movie():
     query = request.form.get("query")
@@ -117,9 +142,11 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    reviews = list(mongo.db.reviews.find(
+        {"created_by": session["user"]}))
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, reviews=reviews)
 
     return redirect(url_for("login"))
 

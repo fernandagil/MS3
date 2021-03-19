@@ -1,6 +1,6 @@
 // read more/less button
 $(document).ready(function() {
-	var showChar = 130;
+	var showChar = 160;
 	var ellipsestext = "...";
 	var moretext = "more";
 	var lesstext = "less";

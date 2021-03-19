@@ -9,7 +9,7 @@
 
 {% block content %}
 
-    <div class="col-10 offset-1 col-md-8 offset-md-2 text-container">
+    <div class="col-10 offset-1 col-md-8 offset-md-2 review-form text-container">
         
         <!-- menu -->
         <div class="row profile-header">
@@ -27,26 +27,22 @@
                 <h3 class="center-align light-blue-text text-darken-4">
                     Your movie reviews
                 </h3>
-
-                {% if reviews|length > 0 %} 
-                    {% for review in reviews %}
-                        <div class="row">
-                            <div class="col-4 col-md-3 col-lg-2">
-                                <div class="card-body">
-                                    <h6 class="card-title"> }}</h6>
-                                    <p>{{ reviews.user_review }}</p>
-                                </div>
-                                <div class="card-footer">
-
-                                    
-                                </div>
+            
+                <!-- other user's reviews -->
+                <div class="row comment-section">
+                    {% if reviews|length > 0 %}
+                        {% for review in reviews %}
+                            <div class="col-12 comment-text">
+                                <small class="text-right comment-footer">{{ review.movie_name.movie_name }} </small>
+                                <p class="comment more">{{ review.user_review }}</p>
                             </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="col-12 comment-text">
+                            <p>· You have no reviews yet ·</p>
                         </div>
-                    {% endfor %}
-                {% else %}  
-                    <p>You have no reviews yet</p>
-                {% endif %} 
-
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
