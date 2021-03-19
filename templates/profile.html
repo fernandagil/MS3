@@ -27,6 +27,26 @@
                 <h3 class="center-align light-blue-text text-darken-4">
                     Your movie reviews
                 </h3>
+
+                {% if reviews|length > 0 %} 
+                    {% for review in reviews %}
+                        <div class="row">
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <div class="card-body">
+                                    <h6 class="card-title"> }}</h6>
+                                    <p>{{ reviews.user_review }}</p>
+                                </div>
+                                <div class="card-footer">
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}  
+                    <p>You have no reviews yet</p>
+                {% endif %} 
+
             </div>
         </div>
     </div>
