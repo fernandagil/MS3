@@ -41,11 +41,12 @@ The project's main goal is to have a place where registered users can create, re
 - **Colours**: to keep consistency through the project, I first selected an [image](https://www.freepik.com/free-vector/retro-background-with-film-camera_1023417.htm#page=2&query=movie+background&position=30) to be the main image in the *home page*  and from that image I created the colour palette.
  
 ![colour palette](readme-files/ms3-palette.png)
+
 ---
  
 ## 2. Features
 
-### 2.1. Existing features
+### 2.1. CRUD functionality
 All users can:
 - view all movies
 - view all movie reviews
@@ -58,7 +59,7 @@ The admin can:
 - Add, edit and delete movies to the database
 
 
-### 2.2. CRUD functionality
+### 2.2. Existing Features
  
 **Site wide**:
 - **NavBar**: gives consistency and allow users to navigate the page easily. This includes:
@@ -93,23 +94,53 @@ The admin can:
  **Log In Page**:
  - **Log In Form**: allows users to log in with the information they provided in their registration form.
  
-
 ### 2.3. Potential Features
- 
+Some futures that I would like to implement in the future are:
+- A rating system for users to vote which movie they liked the most.
+- A watchlist for users to add the movies they want to watch or they already watched.
+- A random movie option that randomly selects a movie from the database and recommends it to the user.
+- An Edit and delete profile option
+
 ---
  
 ## 3. Technologies used
- 
-- [HTML5](https://html.com/) - provides the content and structure for my website.
-- [CSS3](http://www.css3.info/) - provides the styling.
-- [Bootstrap](https://getbootstrap.com/) - used to create the layout of the project and some styling.
-- [Python]() - 
-- [Flask]() - used in conjunction with the Jinja2 templating language to generate the HTML templates on the backend. It was also used to access and process the data sent from the frontend to the server.
-- [MongoDB]() - 
-- [Balsamiq](https://balsamiq.com/) - used to create the project's wireframes.
-- [Gitpod](https://gitpod.io/) - used to develop the website.
-- [GitHub](https://github.com/) - 
+#### Languages
+- [HTML5](https://html.com/) provides the content and structure for the project.
+- [CSS3](http://www.css3.info/) provides the styling.
+- [JavaScript](https://www.javascript.com/) provides the functionality and interaction.
+- [Python](https://www.python.org/) provides the backend for the project.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is used for templating Python.
 
+#### Frameworks & Libraries
+- [Bootstrap](https://getbootstrap.com/) is used to create the layout of the project and some styling.
+- [jQuery](https://jquery.com/) complements JavaScript.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) is used in conjunction with the Jinja2 templating language to generate the HTML templates on the backend. It was also used to access and process the data sent from the frontend to the server.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) is used for password hashing and authentication.
+- [Google Fonts](https://fonts.google.com/) is used to provide the fonts: Londrina Shadow and Raleway.
+- [Font Awesome](https://fontawesome.com/) is used to provide some icons.
+
+#### Project Management
+- [MongoDB](https://www.mongodb.com/) is used to host the database for the project.
+- [Git](https://git-scm.com/) is used for version control.
+- [GitHub](https://github.com/) is used to host the project.
+- [Heroku](https://www.heroku.com/) is used to deploy the app.
+- [Gitpod](https://gitpod.io/) was used to develop the website.
+
+#### Design
+- [Balsamiq](https://balsamiq.com/) was used to create the project's wireframes.
+- [HTML Color Codes](https://html-color-codes.info/) was used to select colours codes from an image to create the website's colour palette.
+- [Pixabay](https://pixabay.com/) and [Freepik](https://www.freepik.com/) were used to get images for the project.
+- [TinyJPG](https://tinyjpg.com/) was used to compress the size of the images.
+- [Favicon](https://www.favicon-generator.org//) was used to create the icon.
+
+#### Testing
+- [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to test the responsiveness of the site.
+- [Am I Responsive?](http://ami.responsivedesign.is/) was used to test the responsiveness of the site.
+- [Autoprefixer](https://autoprefixer.github.io/) was used to parsethe CSS and to add vendor prefixes to CSS rules.
+- [W3C HTML Validator](https://validator.w3.org/) was used to check the HTML code for any errors.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check the CSS code for any errors.
+- [JS Hint](https://jshint.com/) was used to check the JavaScript code for any errors.
+- [PEP8](http://pep8online.com/) was used to check the Python code for any errors.
 
 ---
  
