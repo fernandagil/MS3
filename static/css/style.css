@@ -19,10 +19,10 @@ body {
 .flashes {
     color: #555555;
     background-color: #fafafa;
-    padding: 5px;
+    padding: 8px;
     border: 4px double #F6B86F;
     border-radius: 0.5rem;
-    margin: 5px;
+    margin-top: 8px;
 }
 
 .text-container {

@@ -36,7 +36,7 @@ The project's main goal is to have a place where registered users can create, re
 - As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
 
 ### 1.3. Design Choices
-- **Fonts**: I chose Raleway as I feel it was an aesthetic and readable font. To emphasize some headers I used Londrina Shadow, since it gave me the feel of a hand drawn header in a diary. Both fonts were imported from (Google Fonts)[https://fonts.google.com/]
+- **Fonts**: I chose Raleway as I feel it was an aesthetic and readable font. To emphasize some headers I used Londrina Shadow, since it gave me the feel of a hand drawn header in a diary. Both fonts were imported from [Google Fonts](https://fonts.google.com/)
 - **Movie Posters**: When adding the image of a movie to the database, I filtered the search by usage rights: *Free to share and use*
 - **Colours**: to keep consistency through the project, I first selected an [image](https://www.freepik.com/free-vector/retro-background-with-film-camera_1023417.htm#page=2&query=movie+background&position=30) to be the main image in the *home page*  and from that image I created the colour palette.
  
