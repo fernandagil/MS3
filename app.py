@@ -34,9 +34,9 @@ def display_movie(movie_id):
     # Display information about that movie
     movie_element = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
 
-    if movie_element["movie_name"]:
+    if movie_element:
         reviews = list(mongo.db.reviews.find(
-            {"movie_name": movie_element["movie_name"]}))
+            {"movie_name": movie_element}))
 
     # Leave a review about that movie
     if request.method == "POST":
