@@ -20,6 +20,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+#---------------- HOME PAGE, MOVIE PAGE AND LEAVE REVIEWS ----------------#
+
+# Main page 
 @app.route("/")
 @app.route("/get_movies")
 def get_movies():
@@ -28,17 +31,18 @@ def get_movies():
     return render_template("movies.html", movies=movies)
 
 
+# Displays movie. Shows and leaves reviews
 @app.route("/display_movie/<movie_id>", methods=["GET", "POST"])
 def display_movie(movie_id):
 
-    # Display information about that movie
+    # Displays information about that movie
     movie_element = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
 
     if movie_element:
         reviews = list(mongo.db.reviews.find(
             {"movie_name": movie_element}))
 
-    # Leave a review about that movie
+    # Leaves a review about that movie
     if request.method == "POST":
         new_review = {
             "movie_name": movie_element,
@@ -49,34 +53,16 @@ def display_movie(movie_id):
         flash("Review Successfully Added")
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie) #does this just reload movie page with new review??
+    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie)
+
+
+# ---------------- EDIT AND DELETE REVIEWS ----------------#
 
 
 
-# def display_movie(movie_id):
+# ---------------- SEARCH ----------------#
 
-#     # Display information about that movie
-#     movie_element = mongo.db.movies.find({"_id": ObjectId(movie_id)}, {"movie_name": movie_element["movie_name"]})
-
-#     if movie_element:
-#         reviews = list(mongo.db.reviews.find(
-#             {"movie_id": movie_element}))
-
-#     # Leave a review about that movie
-#     if request.method == "POST":
-#         new_review = {
-#             "movie_id": movie_element,
-#             "movie_name": movie_name,
-#             "user_review": request.form.get("user_review"),
-#             "created_by": session["user"]
-#         }
-#         mongo.db.reviews.insert_one(new_review)
-#         flash("Review Successfully Added")
-
-#     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-#     return render_template("display_movie.html", movie_id=movie_id, reviews=reviews) #does this just reload movie page with new review??
-
-
+# SEARCH FOR MOVIES
 @app.route("/search_movie", methods=["GET", "POST"])
 def search_movie():
     query = request.form.get("query")
@@ -84,6 +70,9 @@ def search_movie():
     return render_template("search_movie.html", movies=movies)
 
 
+# ---------------- REGISTER, LOGIN AND LOGOUT ----------------#
+
+# Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -109,6 +98,7 @@ def register():
     return render_template("register.html")
 
 
+# Log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -137,6 +127,7 @@ def login():
     return render_template("login.html")
 
 
+# User's profile and display user's reviews
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -151,6 +142,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Log out
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -160,6 +152,9 @@ def logout():
     return redirect(url_for("get_movies")) 
 
 
+#---------------- ADMIN: ADD, EDIT, DELETE MOVIES ----------------#
+
+# Add a new movie to database
 @app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
     if request.method == "POST":
@@ -181,6 +176,7 @@ def add_movie():
     return render_template("add_movie.html")
 
 
+# Edit existing movie
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
     if request.method == "POST":
@@ -206,12 +202,15 @@ def edit_movie(movie_id):
     return render_template("edit_movie.html", movie=movie)
 
 
+# Delete movie
 @app.route("/delete_movie/<movie_id>")
 def delete_movie(movie_id):
     mongo.db.movies.remove({"_id": ObjectId(movie_id)})
     flash("Movie Successfully Deleted")
     return redirect(url_for("get_movies"))
 
+
+#--------------------------------#
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
