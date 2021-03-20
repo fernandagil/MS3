@@ -57,6 +57,27 @@ def display_movie(movie_id):
 
 
 # ---------------- EDIT AND DELETE REVIEWS ----------------#
+# Edit existing movie
+@app.route("/edit_review/<movie_id>", methods=["GET", "POST"])
+def edit_review(movie_id):
+
+    movie_element = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
+    if movie_element:
+        reviews = list(mongo.db.reviews.find(
+            {"movie_name": movie_element}))
+
+    if request.method == "POST":
+        submit = {
+            "movie_name": movie_element,
+            "user_review": request.form.get("user_review"),
+            "created_by": session["user"]
+        }
+        mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
+        flash("Movie Successfully Updated")
+        return redirect(url_for("get_movies"))
+
+    review = mongo.db.reviews.find_one({"_id": ObjectId(movie_id)})
+    return render_template("edit_review.html", review=review)
 
 
 # ---------------- SEARCH ----------------#
@@ -191,7 +212,6 @@ def edit_movie(movie_id):
             "watchlist": request.form.get("watchlist"),
             "review": request.form.get("review"),
             "created_by": session["user"],
-            # "created_when": session["date"] ???
         }
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
         flash("Movie Successfully Updated")
