@@ -6,10 +6,29 @@ Movie Journal is the place where you can keep track of your favourite (and least
 You can visit the deployed website [here](https://ms3-movie-journal.herokuapp.com/).
  
 ---
+#### CONTENT
+- <a href="#1-UX">1. UX</a>
+  - <a href="#1-UX-1">1.1 Project goals</a>
+  - <a href="#1-UX-2">1.2 User Stories</a>
+  - <a href="#1-UX-3">1.3 Design Choices</a>
+  - <a href="#1-UX-3">1.4 Information Architecture</a>
+  - <a href="#1-UX-4">1.5 Wireframes</a>
+- <a href="#2-FEAT">2. Features</a>
+  - <a href="#2-FEAT-1">2.1 CRUD</a>
+  - <a href="#2-FEAT-1">2.2 Existing features</a>
+  - <a href="#2-FEAT-3">2.3 Potential Features</a>
+- <a href="#3-TECH">3. Technologies Used</a>
+- <a href="#4-TEST">4. Testing</a>
+- <a href="#5-DEPL">5. Deployment</a>
+- <a href="#6-CRED">6. Credits</a>
+
+---
  
+<span id="1-UX"></span>
 ## 1. UX
- 
-### 1.1. Project Goals
+
+<span id="1-UX-1"></span>
+### 1.1 Project Goals
 The project's main goal is to have a place where registered users can create, read, update and delete movie reviews.
 
 - They can create a review by clicking on any movie
@@ -17,7 +36,8 @@ The project's main goal is to have a place where registered users can create, re
 - They can update a review by clicking 'edit' on the review in their *Profile Page*
 - They can delete a review by clicking 'delete' on the review in their *Profile Page*
  
-### 1.2. User Stories
+<span id="1-UX-2"></span>
+### 1.2 User Stories
 ###### General Users
 - As a user, I want to immediately understand the purpose of the site.
 - As a user, I want to be able to see reviews that other users have created about a movie.
@@ -35,19 +55,22 @@ The project's main goal is to have a place where registered users can create, re
 - As the project owner, I want to be able to add, read, update, and delete movies from the database.
 - As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
 
-### 1.3. Design Choices
+<span id="1-UX-3"></span>
+### 1.3 Design Choices
 - **Fonts**: I chose Raleway as I feel it was an aesthetic and readable font. To emphasize some headers I used Londrina Shadow, since it gave me the feel of a hand drawn header in a diary. Both fonts were imported from [Google Fonts](https://fonts.google.com/)
 - **Movie Posters**: When adding the image of a movie to the database, I filtered the search by usage rights: *Free to share and use*
 - **Colours**: to keep consistency through the project, I first selected an [image](https://www.freepik.com/free-vector/retro-background-with-film-camera_1023417.htm#page=2&query=movie+background&position=30) to be the main image in the *home page*  and from that image I created the colour palette.
  
 ![colour palette](readme-files/ms3-palette.png)
 
-### 1.4. Information Architecture
+<span id="1-UX-4"></span>
+### 1.4 Information Architecture
 MongoDB was used for this projec project. There are three collections in the database: 
 
 ![database](readme-files/database.png)
 
-### 1.5. Wireframes
+<span id="1-UX-5"></span>
+### 1.5 Wireframes
 The wireframes were designed using [Balsamiq](https://balsamiq.com/). They're accessible in the following links:
  
 |    Home Page   |    Display Movie    |    Add/Edit Movie    |    Profile Page    |
@@ -55,10 +78,12 @@ The wireframes were designed using [Balsamiq](https://balsamiq.com/). They're ac
 |![](wireframes/ms3-wireframe-1.jpg)|![](wireframes/ms3-wireframe-2.jpg)|![](wireframes/ms3-wireframe-3.jpg)|![](wireframes/ms3-wireframe-4.jpg)|
 
 ---
- 
+
+<span id="2-FEAT"></span>
 ## 2. Features
 
-### 2.1. CRUD functionality
+<span id="2-FEAT-1"></span>
+### 2.1 CRUD functionality
 All users can:
 - view all movies
 - view all movie reviews
@@ -70,14 +95,14 @@ The admin can:
 - Add, edit and delete their movie reviews
 - Add, edit and delete movies to the database
 
-
-### 2.2. Existing Features
+<span id="2-FEAT-2"></span>
+### 2.2 Existing Features
  
 **Site wide**:
 - **NavBar**: gives consistency and allow users to navigate the page easily. This includes:
--- **Project's logo**: allows users to identify where they are.
--- **Navigation Menu**: allows users to navigate the site in an easy and intuitive way.
--- **Search Bar**: allows users to search for a movie. This redirects the user to the **Search Results Page**.
+    - **Project's logo**: allows users to identify where they are.
+    - **Navigation Menu**: allows users to navigate the site in an easy and intuitive way.
+    - **Search Bar**: allows users to search for a movie. This redirects the user to the **Search Results Page**.
 
 **Search Results Page**:
 - **Results**: shows the users the results for their search. If no results are found, the user gets a Suggestion Form
@@ -90,16 +115,15 @@ The admin can:
 
 **Movie Page**:
 - **Movie Information**: allows users to know more about a specific movie. Every Movie Page includes:
-
--- **Movie Title**
--- **Movie Poster**
--- **Year**
--- **Genre**
--- **Director**
--- **Main Cast**
--- **Link to Trailer**
--- **Synopsis**
-- **Reviews Section**: allows users to see the reviews for that movie. It also allows registered users to leave their own reviews about that movie.
+    - **Movie Title**
+    - **Movie Poster**
+    - **Year**
+    - **Genre**
+    - **Director**
+    - **Main Cast**
+    - **Link to Trailer**
+    - **Synopsis**
+    - **Reviews Section**: allows users to see the reviews for that movie. It also allows registered users to leave their own reviews about that movie.
 
 **Register Page**:
  - **Registration Form**: allows users to sign up by providing some information.
@@ -107,7 +131,8 @@ The admin can:
  **Log In Page**:
  - **Log In Form**: allows users to log in with the information they provided in their registration form.
  
-### 2.3. Potential Features
+<span id="2-FEAT-3"></span>
+### 2.3 Potential Features
 Some futures that I would like to implement in the future are:
 - A rating system for users to vote which movie they liked the most.
 - A watchlist for users to add the movies they want to watch or they already watched.
@@ -115,8 +140,9 @@ Some futures that I would like to implement in the future are:
 - An Edit and delete profile option
 
 ---
- 
-## 3. Technologies used
+
+<span id="3-TECH"></span>
+## 3. Technologies Used
 #### Languages
 - [HTML5](https://html.com/) provides the content and structure for the project.
 - [CSS3](http://www.css3.info/) provides the styling.
@@ -157,15 +183,17 @@ Some futures that I would like to implement in the future are:
 
 ---
  
+<span id="4-TEST"></span>
 ## 4. Testing
  
 The testing process can be seen [here](TESTING.md).
  
 ---
  
+<span id="5-DEPL"></span>
 ## 5. Deployment
  
-### 5.1. Heroku deployment
+### 5.1 Heroku deployment
 
 Heroku needs some application and dependencies to run the app:
 1. Create a **requirements.txt** file using the terminal command  `pip freeze > requirements.txt`.
@@ -192,12 +220,12 @@ Heroku needs some application and dependencies to run the app:
 10. Below that select the branch that you want to deploy (in this case *master*) and click **Deploy Branch**.
 11. Once that’s done, you can click **View** to launch your app.
 
-### 5.2. Running This Project Locally
+### 5.2 Running This Project Locally
 ##### Prerequisites
 - [Python3](https://www.python.org/)
 - [PIP](https://pypi.org/project/pip/)
 - [Git](https://git-scm.com/)
-- [MongoDB](https://www.mongodb.com/). In MongoDB you'll have to create a cluster, a database and inside it, add three collections: users, reviews and movies.
+- [MongoDB](https://www.mongodb.com/). In MongoDB you'll have to create a cluster, a database and inside it, add three collections: *users*, *reviews* and *movies*.
 
 1. Log in to GitHub and go to the [Movie Journal repository](https://github.com/fernandagil/ms3-movie-journal).
 2. Click on the **Code** button, and there copy the clone URL below HTTPS.
@@ -219,46 +247,12 @@ os.environ.setdefault("MONGO_DBNAME", "<database name>")
 8. Add that file to your .gitignore file to prevent your environment variables from being public.
 9. You can now run the app locally using `python3 app.py`.
 
-This guide assumes you are using MongoDB:
-
-Sign up or log in to MongoDB.
-
-Create a cluster and a database.
-
-Create collections in your database for Members, Library and Reviews, adding string values to each that match those shown in the Database Schema
-
-This guide assumes you are using Gitpod:
-
-Install the Gitpod Browser Extensions for Chrome and restart your browser.
-
-Log into Gitpod and navigate to the GoBooks Project GitHub repository.
-
-Click the green "Gitpod" button at the top of the repository.
-
-Alternatively, you can open up your repository and use the following command to clone this project.
-
-git clone https://github.com/Robert-Clark-1990/MS3_GoBooks.git
-
-Ensure that all the requirements are downloaded by using the following command:
-
-pip3 install -r requirements.txt
-
-Set the variables for IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME in the env.py file.
-
-Ensure the database name is the same as the one on MongoDB so that it can connect. For example, this project's database name is gobooks
-
-Ensure the env.py and pycache/ files are added to the .gitignore
-
-Run the app in your browser by inputting the following command:
-
-python3 app.py
-
-
 ---
  
+<span id="6-CRED"></span>
 ## 6. Credits
  
-### 6.1. Content
+### 6.1 Content
 The project's main code is based on the Code Institute Task Manger Mini-Project by [Tim Nelson](https://github.com/TravelTimN).
 
 The functionality for the *show more*/*show less* button is based in [this article](https://www.viralpatel.net/dynamically-shortened-text-show-more-link-jquery/) from Viralpatel.net.
@@ -267,7 +261,7 @@ I took inspiration from [Juan Stelling](https://github.com/juanstelling/MS3_brea
 
 All the information about the movies and some reviews were obtained from [IMDB](https://www.imdb.com/).
 
-### 6.2. Media
+### 6.2 Media
 This project has been designed using resources from [Freepik.com](https://www.freepik.com/) and [Pixabay](https://pixabay.com/) from the following authors:
 
 - [Freepik](https://www.freepik.com/freepik)
@@ -277,4 +271,4 @@ This project has been designed using resources from [Freepik.com](https://www.fr
 
 Some of them have been modified for the purpose of this project.
  
-### 6.1. Acknowledgments
+### 6.1 Acknowledgments
