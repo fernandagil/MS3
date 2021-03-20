@@ -63,31 +63,23 @@ def display_movie(movie_id):
 def edit_review(review_id):
 
     if request.method == "POST":
-        my_review = {
-            "movie_name": mongo.db.reviews.find_one(
-                {"_id": ObjectId(review_id)})["movie_name"],
-            "created_by": session["user"]
-        }
         update = {
-            "$set": { "user_review": request.form.get("user_review")}
-        }
+            "$set": {"userr_review": request.form.get("user_review")}
+            }
         mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, update)
         flash("Review Successfully Updated")
         return redirect(url_for("get_movies"))
 
-    # if request.method == "POST":
-    #     update = {
-    #         "movie_name": mongo.db.reviews.find_one(
-    #             {"_id": ObjectId(review_id)})["movie_name"],
-    #         "user_review": request.form.get("user_review"),
-    #         "created_by": session["user"]
-    #     }
-    #     mongo.db.reviews.update({"_id": ObjectId(review_id)}, update)
-    #     flash("Review Successfully Updated")
-    #     return redirect(url_for("get_movies"))
-
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
+
+
+# Delete existing review
+@app.route("/delete_review/<review_id>")
+def delete_review(review_id):
+    mongo.db.reviews.remove({"_id": ObjectId(review_id)})
+    flash("Review has been deleted")
+    return redirect(url_for("get_movies"))
 
 
 # ---------------- SEARCH ----------------#

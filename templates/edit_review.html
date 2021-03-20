@@ -12,9 +12,8 @@
     <form class="col-10 offset-1 review-form text-container" method="POST"
         action="{{ url_for('edit_review', review_id=review._id) }}">
     
-        <!-- Cancel & Delete buttons -->
+        <!-- Cancel button -->
         <div class="col-12 div-header text-right">
-
             <a href="{{ url_for('get_movies') }}" class="btn btn-light orange-btn" role="button">Cancel</a>
         </div>
     
