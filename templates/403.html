@@ -2,12 +2,12 @@
 
 {% block content %}
 
-    <div class="col-10 offset pages-header-bg">
-        <div class="col-12">
-            <h2 class="pages-header">404</h2>
-            <p>Sorry, the page you requested could not be found.</p>
+    <div class="col-8 offset-2 text-container">
+        <div class="12">
+            <h2 class="error-header">403</h2>
+            <p>The page you were trying to reach is forbidden for some reason.</p>
         </div>
-
+    
         <!-- Home button -->
         <div class="col-12 div-header text-right">
             <a href="{{ url_for('get_movies') }}" class="btn btn-light orange-btn" role="button">Home</a>

@@ -28,6 +28,7 @@ body {
 .text-container {
     color: #fafafa;
     background-color: #555555;
+    border-radius: 0.5rem;
 }
 
 .div-header {
@@ -425,6 +426,17 @@ a.morelink {
     margin-top: 10px;
 }
 
+/* --------------- ERROR HANDLING --------------- */
+.error-header{
+    margin: 30px 5px;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 4.5rem;
+    letter-spacing: 5px;
+    text-align: center;
+}
 
 /* --------------- MEDIA QUERIES --------------- */
 

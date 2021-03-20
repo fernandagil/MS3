@@ -12,6 +12,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 
+# -------------------------------------------------------------------- CONFIG #
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -20,7 +21,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-#---------------- HOME PAGE, MOVIE PAGE AND LEAVE REVIEWS ----------------#
+# ----------------------------------- HOME PAGE, MOVIE PAGE AND LEAVE REVIEWS #
 
 # Main page 
 @app.route("/")
@@ -38,12 +39,21 @@ def display_movie(movie_id):
     # Displays information about that movie
     movie_element = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
 
+    # movie id doesn't exist, show 404 error
+    if not movie_element:
+        return render_template("404.html")
+
     if movie_element:
         reviews = list(mongo.db.reviews.find(
             {"movie_name": movie_element}))
 
     # Leaves a review about that movie
     if request.method == "POST":
+        
+        # Only users can add reviews
+        if not session.get("user"):
+            return render_template("404.html")
+
         new_review = {
             "movie_name": movie_element,
             "user_review": request.form.get("user_review"),
@@ -56,11 +66,15 @@ def display_movie(movie_id):
     return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie)
 
 
-# ---------------- EDIT AND DELETE REVIEWS ----------------#
+# --------------------------------------------------- EDIT AND DELETE REVIEWS #
 
 # Edit existing review
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+
+    # Only users can edit reviews
+    if not session.get("user"):
+        return render_template("404.html")
 
     if request.method == "POST":
         update = {
@@ -82,7 +96,7 @@ def delete_review(review_id):
     return redirect(url_for("get_movies"))
 
 
-# ---------------- SEARCH ----------------#
+# -------------------------------------------------------------------- SEARCH #
 
 # SEARCH FOR MOVIES
 @app.route("/search_movie", methods=["GET", "POST"])
@@ -92,7 +106,7 @@ def search_movie():
     return render_template("search_movie.html", movies=movies)
 
 
-# ---------------- REGISTER, LOGIN AND LOGOUT ----------------#
+# ------------------------------------------------ REGISTER, LOGIN AND LOGOUT #
 
 # Register
 @app.route("/register", methods=["GET", "POST"])
@@ -152,6 +166,10 @@ def login():
 # User's profile and display user's reviews
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # Only users can acces profile
+    if not session.get("user"):
+        return render_template("404.html")
+
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -171,14 +189,18 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     # where to redirect after logout (to login again or main page?)
-    return redirect(url_for("get_movies")) 
+    return redirect(url_for("login")) 
 
 
-#---------------- ADMIN: ADD, EDIT, DELETE MOVIES ----------------#
+# ------------------------------------------- ADMIN: ADD, EDIT, DELETE MOVIES #
 
 # Add a new movie to database
 @app.route("/add_movie", methods=["GET", "POST"])
 def add_movie():
+    # Only admin can add movies
+    if not session.get("user") == "admin":
+        return render_template("404.html")
+
     if request.method == "POST":
         movie = {
             "movie_name": request.form.get("movie_name"),
@@ -201,6 +223,10 @@ def add_movie():
 # Edit existing movie
 @app.route("/edit_movie/<movie_id>", methods=["GET", "POST"])
 def edit_movie(movie_id):
+    # Only admin can edit movies
+    if not session.get("user") == "admin":
+        return render_template("404.html")
+
     if request.method == "POST":
         submit = {
             "movie_name": request.form.get("movie_name"),
@@ -229,7 +255,7 @@ def delete_movie(movie_id):
     return redirect(url_for("get_movies"))
 
 
-# --------------------------------------------- ERROR HANDLERS #
+# ------------------------------------------------------------ ERROR HANDLERS #
 @app.errorhandler(404)
 def not_found(e):
     return render_template("error_handlers/404-page.html"), 404
@@ -245,7 +271,7 @@ def forbidden(e):
     return render_template("error_handlers/403-page.html"), 403
 
 
-# --------------------------------------------- #
+# --------------------------------------------------------------------------- #
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
