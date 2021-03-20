@@ -55,8 +55,9 @@ body {
 /* --------------- BACKGROUNDS & IMAGES --------------- */
 .home-header-bg {
     background-image: url("../images/home-bg.png");
-    min-height: 75vh;
+    min-height: 85vh;
     background-size: cover;
+    margin-bottom: 50px;
 }
 
 .pages-header-bg {
@@ -68,12 +69,18 @@ body {
     background-size: cover;
 }
 
+.movies-row {
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
 .movie-card-display {
     background-image: url("../images/card-bg8.png");
     background-size: cover;
     margin: 5px 0;
     min-height: 100px;
     padding: 0;
+    color: #555555;
 }
 
 /* --------------- HEADERS --------------- */
@@ -85,6 +92,16 @@ body {
     font-weight: bold;
     font-size: 8rem;
     letter-spacing: 10px;
+}
+
+.home-subheader {
+    margin: 20px 0;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 3.2rem;
+    letter-spacing: 5px;
 }
 
 .pages-header {
@@ -102,6 +119,22 @@ body {
     width: 40px;
     height: 40px;
     margin-left: 20px;
+}
+
+.movies-header {
+    margin: 30px 0;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.profile-header {
+    margin: 40px;
+    height: 30px;
 }
 
 /* --------------- FOOTER --------------- */
@@ -240,21 +273,7 @@ body {
     margin-top: 25px;
 }
 
-.movies-header {
-    margin: 30px 0;
-    color: #fafafa;
-    text-shadow: 2px -2px #418a7b;
-    font-family: "Londrina Shadow", cursive;
-    font-weight: bold;
-    font-size: 4rem;
-    letter-spacing: 5px;
-    text-align: left;
-}
 
-.profile-header {
-    margin: 40px;
-    height: 30px;
-}
 
 
 

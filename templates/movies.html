@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 {% block page %}
-    <div class="col-12 home-header-bg">
-        <div class="col-md-8 offset-lg-3 text-end">
-            <h1 class="home-header"> MOVIE<br>
-                JOURNAL
-            </h1>
+    <div class="col-12 home-header-bg text-end">
+        <div class="row">
+            <div class="col-12 col-lg-8 offset-lg-3 text-end">
+                <h1 class="home-header"> MOVIE<br>
+                    JOURNAL
+                </h1>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
 
-    <div class="col-12 card-group">
-        <div class="row">
+    <div class="col-12 card-group text-container text-center">
+            <h3 class="movies-header"> Latest Movies</h3>
+        <div class="row movies-row">
             {% for movie in movies %}
                 <div class="col-3 col-md-2 col-lg-1 card movie-card-display">
                     <div class="card-body">
