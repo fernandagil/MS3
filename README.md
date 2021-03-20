@@ -201,6 +201,7 @@ The project's main code is based on the Code Institute Task Manger Mini-Project 
 
 The functionality for the *show more*/*show less* button is based in [this article](https://www.viralpatel.net/dynamically-shortened-text-show-more-link-jquery/) from Viralpatel.net.
  
+I took inspiration from [Juan Stelling](https://github.com/juanstelling/MS3_breaktasty) for the error handlers.
 ### 6.2. Media
  
 ### 6.1. Acknowledgments
