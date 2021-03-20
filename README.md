@@ -42,6 +42,18 @@ The project's main goal is to have a place where registered users can create, re
  
 ![colour palette](readme-files/ms3-palette.png)
 
+### 1.4. Information Architecture
+MongoDB was used for this projec project. There are three collections in the database: 
+
+![database](readme-files/database.png)
+
+### 1.5. Wireframes
+The wireframes were designed using [Balsamiq](https://balsamiq.com/). They're accessible in the following links:
+ 
+|    Home Page   |    Display Movie    |    Add/Edit Movie    |    Profile Page    |
+|     :----:     |        :----:       |        :----:        |        :----:      |
+|![](wireframes/ms3-wireframe-1.jpg)|![](wireframes/ms3-wireframe-2.jpg)|![](wireframes/ms3-wireframe-3.jpg)|![](wireframes/ms3-wireframe-4.jpg)|
+
 ---
  
 ## 2. Features
