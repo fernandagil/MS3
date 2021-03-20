@@ -78,10 +78,8 @@
                                     </div>
                                     <div class="col-6 text-right pr-3">
                                         {% if review.created_by == session.user|lower %}
-                                            <a href="" class="btn btn-light review-btns"
-                                                role="button" data-toggle="modal" data-target=".bd-example-modal-xl">Edit</a>
-                                            <a href="#" class="btn btn-light review-btns"
-                                                role="button">Delete</a>
+                                            <a href="{{ url_for('edit_movie', movie_id=movie._id) }}" class="btn btn-light review-btns" role="button">Edit</a>
+                                            <a href="#" class="btn btn-light review-btns" role="button">Delete</a>
                                         {% endif %}
                                     </div>
 
@@ -101,6 +99,8 @@
     </div>
 
     <!-- Modal for editing a review -->
+    <a href="" class="btn btn-light review-btns"
+                                                role="button" data-toggle="modal" data-target=".bd-example-modal-xl">Edit</a>
     <!-- { url_for('edit_movie', movie_id=movie._id) }} -->
     <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -123,7 +123,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <textarea name="form-control synopsis" class="form-control" rows="4" maxlength="300">
-                                            {{- movie.synopsis -}}
+
                                         </textarea>
                                     </div>
                                 </div>

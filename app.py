@@ -59,7 +59,6 @@ def display_movie(movie_id):
 # ---------------- EDIT AND DELETE REVIEWS ----------------#
 
 
-
 # ---------------- SEARCH ----------------#
 
 # SEARCH FOR MOVIES
