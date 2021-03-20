@@ -16,8 +16,6 @@
             emailjs.init("user_B14UevRtlfRgzRXYT3bx2");
         })();
     </script>
-    {% block styles %}
-    {% endblock %}
 
     <title>TV SHOWS REVIEWS</title>
 </head>
@@ -72,21 +70,6 @@
         </nav>
     </header>
 
-    <section>
-        <!-- flash messages -->
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row text-center">
-                        <div class="col-8 offset-2 flashes">
-                            <h6>{{ message }}</h6>
-                        </div>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
-
     <main>
         <div class="container-fluid">
 
@@ -95,6 +78,21 @@
                 {% block page %}
                 {% endblock %}
             </div>
+
+            <!-- flash messages -->
+            <section>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="row text-center">
+                                <div class="col-8 offset-2 flashes">
+                                    <h6>{{ message }}</h6>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </section>
             
             <!-- main content -->
             <div class="row py-3 px-md-3">

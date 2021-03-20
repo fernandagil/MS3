@@ -11,8 +11,8 @@ You can visit the deployed website [here](https://ms3-movie-journal.herokuapp.co
   - <a href="#1-UX-1">1.1 Project goals</a>
   - <a href="#1-UX-2">1.2 User Stories</a>
   - <a href="#1-UX-3">1.3 Design Choices</a>
-  - <a href="#1-UX-3">1.4 Information Architecture</a>
-  - <a href="#1-UX-4">1.5 Wireframes</a>
+  - <a href="#1-UX-4">1.4 Information Architecture</a>
+  - <a href="#1-UX-5">1.5 Wireframes</a>
 - <a href="#2-FEAT">2. Features</a>
   - <a href="#2-FEAT-1">2.1 CRUD</a>
   - <a href="#2-FEAT-1">2.2 Existing features</a>
