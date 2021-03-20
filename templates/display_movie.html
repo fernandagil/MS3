@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="col-6 text-right pr-3">
                                         {% if review.created_by == session.user|lower %}
-                                            <a href="{{ url_for('edit_review', movie_id=movie._id) }}" class="btn btn-light review-btns" role="button">Edit</a>
+                                            <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-light review-btns" role="button">Edit</a>
                                             <a href="#" class="btn btn-light review-btns" role="button">Delete</a>
                                         {% endif %}
                                     </div>

@@ -10,25 +10,24 @@
 {% block content %}
 
     <form class="col-10 offset-1 review-form text-container" method="POST"
-        action="{{ url_for('edit_review', movie_id=movie._id) }}">
+        action="{{ url_for('edit_review', review_id=review._id) }}">
     
         <!-- Cancel & Delete buttons -->
         <div class="col-12 div-header text-right">
-            <a href="{{ url_for('delete_movie', movie_id=movie._id) }}" class="btn btn-light orange-btn"
-                role="button">Delete</a>
+
             <a href="{{ url_for('get_movies') }}" class="btn btn-light orange-btn" role="button">Cancel</a>
         </div>
     
         <div class="col-12 text-center edit-review-heading">
             <h4>Edit your Review</h4>
-            <p>Did you change your mind about {{ review.movie_name }}?</p>
+            <p>Did you change your mind about {{ review.movie_name.movie_name }}?</p>
         </div>
     
         <!-- user's input -->
         <div class="form-group">
             <div class="row">
                 <div class="col-10 offset-1">
-                    <textarea name="form-control synopsis" class="form-control" rows="4" maxlength="300">{{ review.user_review }}</textarea>
+                    <textarea name="user_review" class="form-control" rows="4" maxlength="300" required>{{- review.user_review -}}</textarea>
                 </div>
             </div>
         </div>
@@ -36,7 +35,7 @@
         <!-- Submit button -->
         <div class="form-row form-row-div">
             <div class="col-10 offset-1 mx-auto">
-                <button type="submit" class="btn btn-light btn-sm green-btn">Edit this Movie</button>
+                <button type="submit" class="btn btn-light btn-sm green-btn">Edit your Review</button>
             </div>
         </div>
     </form>

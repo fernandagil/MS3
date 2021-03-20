@@ -57,26 +57,36 @@ def display_movie(movie_id):
 
 
 # ---------------- EDIT AND DELETE REVIEWS ----------------#
-# Edit existing movie
-@app.route("/edit_review/<movie_id>", methods=["GET", "POST"])
-def edit_review(movie_id):
 
-    movie_element = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-    if movie_element:
-        reviews = list(mongo.db.reviews.find(
-            {"movie_name": movie_element}))
+# Edit existing review
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
 
     if request.method == "POST":
-        submit = {
-            "movie_name": movie_element,
-            "user_review": request.form.get("user_review"),
+        my_review = {
+            "movie_name": mongo.db.reviews.find_one(
+                {"_id": ObjectId(review_id)})["movie_name"],
             "created_by": session["user"]
         }
-        mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
-        flash("Movie Successfully Updated")
+        update = {
+            "$set": { "user_review": request.form.get("user_review")}
+        }
+        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, update)
+        flash("Review Successfully Updated")
         return redirect(url_for("get_movies"))
 
-    review = mongo.db.reviews.find_one({"_id": ObjectId(movie_id)})
+    # if request.method == "POST":
+    #     update = {
+    #         "movie_name": mongo.db.reviews.find_one(
+    #             {"_id": ObjectId(review_id)})["movie_name"],
+    #         "user_review": request.form.get("user_review"),
+    #         "created_by": session["user"]
+    #     }
+    #     mongo.db.reviews.update({"_id": ObjectId(review_id)}, update)
+    #     flash("Review Successfully Updated")
+    #     return redirect(url_for("get_movies"))
+
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
 
 
@@ -209,8 +219,6 @@ def edit_movie(movie_id):
             "trailer": request.form.get("trailer"),
             "movie_img_link": request.form.get("movie_img_link"),
             "synopsis": request.form.get("synopsis"),
-            "watchlist": request.form.get("watchlist"),
-            "review": request.form.get("review"),
             "created_by": session["user"],
         }
         mongo.db.movies.update({"_id": ObjectId(movie_id)}, submit)
