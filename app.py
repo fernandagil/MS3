@@ -229,7 +229,13 @@ def delete_movie(movie_id):
     return redirect(url_for("get_movies"))
 
 
-#--------------------------------#
+# --------------------------------------------- ERROR HANDLERS #
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("error_handlers/404.html"), 404
+
+
+# --------------------------------------------- #
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
