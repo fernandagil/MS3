@@ -232,7 +232,17 @@ def delete_movie(movie_id):
 # --------------------------------------------- ERROR HANDLERS #
 @app.errorhandler(404)
 def not_found(e):
-    return render_template("error_handlers/404.html"), 404
+    return render_template("error_handlers/404-page.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("error_handlers/500-page.html"), 500
+
+
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template("error_handlers/403-page.html"), 403
 
 
 # --------------------------------------------- #
