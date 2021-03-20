@@ -64,11 +64,11 @@ def edit_review(review_id):
 
     if request.method == "POST":
         update = {
-            "$set": {"userr_review": request.form.get("user_review")}
+            "$set": {"user_review": request.form.get("user_review")}
             }
         mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, update)
         flash("Review Successfully Updated")
-        return redirect(url_for("get_movies"))
+        return redirect(url_for("profile", username=session['user']))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
