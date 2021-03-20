@@ -3,7 +3,7 @@
 
 Movie Journal is the place where you can keep track of your favourite (and least favourite) movies by leaving reviews.
  
-You can visit the deployed website [here](https://ms3-fernanda.herokuapp.com/).
+You can visit the deployed website [here](https://ms3-movie-journal.herokuapp.com/).
  
 ---
  
@@ -90,6 +90,7 @@ The admin can:
 
 **Movie Page**:
 - **Movie Information**: allows users to know more about a specific movie. Every Movie Page includes:
+
 -- **Movie Title**
 -- **Movie Poster**
 -- **Year**
@@ -120,7 +121,7 @@ Some futures that I would like to implement in the future are:
 - [HTML5](https://html.com/) provides the content and structure for the project.
 - [CSS3](http://www.css3.info/) provides the styling.
 - [JavaScript](https://www.javascript.com/) provides the functionality and interaction.
-- [Python](https://www.python.org/) provides the backend for the project.
+- [Python3](https://www.python.org/) provides the backend for the project.
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is used for templating Python.
 
 #### Frameworks & Libraries
@@ -164,9 +165,9 @@ The testing process can be seen [here](TESTING.md).
  
 ## 5. Deployment
  
-###### Heroku deployment
+### 5.1. Heroku deployment
 
-Heroku needs some application and dependencies to run the app
+Heroku needs some application and dependencies to run the app:
 1. Create a **requirements.txt** file using the terminal command  `pip freeze > requirements.txt`.
 2. Create a **Procfile** with the terminal command  `echo web: python app.py > Procfile`.
 3. Push these files to GitHub
@@ -187,9 +188,70 @@ Heroku needs some application and dependencies to run the app
 |  MONGO_URI  | mongodb+srv://`<username>`:`<password>`@`<cluster_name>`-qtxun.mongodb.net/`<database_name>`?retryWrites=true&w=majority  |
 |  MONGO_DBNAME  |  `<database name>`  |
 
-9. In the Heroku dashboard for the app, go to **Deploy**, scroll down and click on **Enable Automatic Deployment**
-10. Below that select the branch that you want to deploy (in this case *master*) and click **Deploy Branch**
-11. Once that’s done, you can click **View** to launch your app
+9. In the Heroku dashboard for the app, go to **Deploy**, scroll down and click on **Enable Automatic Deployment**.
+10. Below that select the branch that you want to deploy (in this case *master*) and click **Deploy Branch**.
+11. Once that’s done, you can click **View** to launch your app.
+
+### 5.2. Running This Project Locally
+##### Prerequisites
+- [Python3](https://www.python.org/)
+- [PIP](https://pypi.org/project/pip/)
+- [Git](https://git-scm.com/)
+- [MongoDB](https://www.mongodb.com/). In MongoDB you'll have to create a cluster, a database and inside it, add three collections: users, reviews and movies.
+
+1. Log in to GitHub and go to the [Movie Journal repository](https://github.com/fernandagil/ms3-movie-journal).
+2. Click on the **Code** button, and there copy the clone URL below HTTPS.
+3. Open Git Bash in your local IDE.
+4. Change the current working directory to where you want the cloned directory to be.
+5. Type `git clone`, and then paste the URL you copied: `https://github.com/fernandagil/ms3-movie-journal.git`.
+6. Press **Enter** and your local clone will be created.
+7. Create an **env.py** file that will contain your app's environment variables: 
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "<your_secret_key>")
+os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority")
+os.environ.setdefault("MONGO_DBNAME", "<database name>")
+```
+8. Add that file to your .gitignore file to prevent your environment variables from being public.
+9. You can now run the app locally using `python3 app.py`.
+
+This guide assumes you are using MongoDB:
+
+Sign up or log in to MongoDB.
+
+Create a cluster and a database.
+
+Create collections in your database for Members, Library and Reviews, adding string values to each that match those shown in the Database Schema
+
+This guide assumes you are using Gitpod:
+
+Install the Gitpod Browser Extensions for Chrome and restart your browser.
+
+Log into Gitpod and navigate to the GoBooks Project GitHub repository.
+
+Click the green "Gitpod" button at the top of the repository.
+
+Alternatively, you can open up your repository and use the following command to clone this project.
+
+git clone https://github.com/Robert-Clark-1990/MS3_GoBooks.git
+
+Ensure that all the requirements are downloaded by using the following command:
+
+pip3 install -r requirements.txt
+
+Set the variables for IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME in the env.py file.
+
+Ensure the database name is the same as the one on MongoDB so that it can connect. For example, this project's database name is gobooks
+
+Ensure the env.py and pycache/ files are added to the .gitignore
+
+Run the app in your browser by inputting the following command:
+
+python3 app.py
 
 
 ---
@@ -202,6 +264,17 @@ The project's main code is based on the Code Institute Task Manger Mini-Project 
 The functionality for the *show more*/*show less* button is based in [this article](https://www.viralpatel.net/dynamically-shortened-text-show-more-link-jquery/) from Viralpatel.net.
  
 I took inspiration from [Juan Stelling](https://github.com/juanstelling/MS3_breaktasty) for the error handlers.
+
+All the information about the movies and some reviews were obtained from [IMDB](https://www.imdb.com/).
+
 ### 6.2. Media
+This project has been designed using resources from [Freepik.com](https://www.freepik.com/) and [Pixabay](https://pixabay.com/) from the following authors:
+
+- [Freepik](https://www.freepik.com/freepik)
+- [DGIM Studio](https://www.freepik.com/dgim-studio)
+- [PagDev](https://pixabay.com/es/users/pagdev-4749277/)
+- [Studiogstock](https://www.freepik.com/studiogstock)
+
+Some of them have been modified for the purpose of this project.
  
 ### 6.1. Acknowledgments
