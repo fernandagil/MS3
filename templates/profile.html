@@ -32,9 +32,19 @@
                 <div class="row comment-section">
                     {% if reviews|length > 0 %}
                         {% for review in reviews %}
+
                             <div class="col-12 comment-text">
-                                <small class="text-right comment-footer">{{ review.movie_name.movie_name }} </small>
+                                <small class="text-right comment-footer">{{ review.movie_name.movie_name }}</small>
                                 <p class="comment more">{{ review.user_review }}</p>
+                                <!-- Edit/delete review -->
+                                <div class="row review-footer">
+                                    <div class="col-12 text-right pr-3">
+                                        {% if review.created_by == session.user|lower %}
+                                            <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-light review-btns" role="button">Edit</a>
+                                            <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-light review-btns" role="button">Delete</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         {% endfor %}
                     {% else %}
