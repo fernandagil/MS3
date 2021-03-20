@@ -170,6 +170,10 @@ body {
     color: #fafafa;
 }
 
+.edit-review-btns {
+    margin-top: 5px;
+}
+
 .plus-btn {
     color: #F6B86F;
     font-size: 1.2rem;
@@ -308,13 +312,16 @@ body {
     position: relative;
 }
 
+/* --------------- EDIT REVIEW --------------- */
 .review-footer {
     margin: 8px 0;
 }
 
-.review-btns {
-
+.edit-review-heading {
+    margin-top: 20px;
 }
+
+
 
 /* --------------- SHOW MORE/LESS --------------- */
 .comment {
