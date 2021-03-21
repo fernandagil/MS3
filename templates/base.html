@@ -24,14 +24,14 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark nav-bar text-container">
 
-            <!-- Page Logo -->
+            <!-- page logo -->
             <a class="navbar-brand movie-journal-icon" href="{{ url_for('get_movies') }}"><img src="{{ url_for('static', filename='images/fav.png') }}" alt="Movie Journal"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         
-            <!-- NavBar -->
+            <!-- navbar -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -59,7 +59,7 @@
                     {% endif %}
                     <li>
 
-                        <!-- Search -->
+                        <!-- search -->
                         <form class="form-inline my-2 my-lg-0" action="{{ url_for('search_movie') }}" method="POST">
                             <input class="form-control form-control-sm mr-sm-2" type="text" name="query" id="query" minlength="3" placeholder="Search movie" aria-label="Search">
                             <button class="btn btn-outline-light" type="submit">Search</button>
@@ -137,8 +137,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
     
 </body>
 </html>
