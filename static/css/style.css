@@ -231,7 +231,7 @@ a.morelink {
 
 .home-header-bg {
     background-image: url("../images/home-bg.png");
-    min-height: 85vh;
+    min-height: 90vh;
     background-size: cover;
     margin-bottom: 50px;
 }
@@ -402,8 +402,8 @@ a.morelink {
         padding: 10px 0;
     }
     .home-header {
-        margin: 70px 0;
-        font-size: 4.5rem;
+        margin: 60px 0;
+        font-size: 4rem;
         letter-spacing: 5px;
         text-align: right;
     }
