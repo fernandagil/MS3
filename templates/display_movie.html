@@ -34,7 +34,7 @@
                     <a href="{{ movie.year }}" class="a-link">Watch Trailer</a>
                 </p>
                 <h6 class="movie-info">Synopsis</h6>
-                <p class="movie-synopsis comment more">{{ movie.synopsis }}</p>
+                <p class="comment more">{{ movie.synopsis }}</p>
 
             </div>
         </div>
@@ -71,7 +71,7 @@
                         {% for review in reviews %}
                             <div class="col-12 comment-text">
                                 <p class="comment more">{{ review.user_review }}</p>
-                                
+
                                 <!-- Edit/delete review -->
                                 <div class="row review-footer">
                                     <div class="col-5 offset-1 text-left pl-3">

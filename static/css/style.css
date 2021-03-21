@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Raleway&display=swap');
 
@@ -30,9 +37,6 @@ body {
 .pages-header-bg {
     background-image: url("../images/header.png");
     min-height: 10vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -151,6 +155,8 @@ body {
 .comment {
     padding-bottom: 0;
     margin: 5px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
     margin: 0 auto;
 }
@@ -273,7 +279,7 @@ a.morelink {
 }
 
 .card-body {
-    padding: 1.25rem 0.4rem 0;
+    padding: 1.25rem 0.4rem;
 }
 
 .card-img {
@@ -315,10 +321,6 @@ a.morelink {
 .movie-info {
     font-weight: bold;
     font-size: 1.2rem;
-}
-
-.movie-synopsis {
-    max-lines: 2;
 }
 
 .movie-page-img {
@@ -415,7 +417,7 @@ a.morelink {
 /* Media queries for small devices */
 @media only screen and (min-width: 600px) {
     .card-body {
-        padding: 0.3;
+        padding: 1.1rem 0.2rem;
     }
     .home-header {
         text-align: right;
