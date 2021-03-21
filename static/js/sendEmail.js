@@ -1,7 +1,7 @@
 function sendWelcomeEmail(loginForm) {
     emailjs.send("gmail", "signinConfirmation", {
-        "to_name": loginForm.username.value,
-        "to_email": loginForm.email.value,
+        "from_name": loginForm.username.value,
+        "from_email": loginForm.email.value,
     })
     .then(
         function(response) {
@@ -11,13 +11,12 @@ function sendWelcomeEmail(loginForm) {
             console.log("FAILED", error);
         }
     );
-
 }
 
 function sendMail(contactForm) {
     emailjs.send("gmail", "movieSuggestion", {
-        "to_name": contactForm.name.value,
-        "to_email": contactForm.emailaddress.value,
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.emailaddress.value,
         "movie_suggestion": contactForm.moviesuggestion.value
     })
     .then(
