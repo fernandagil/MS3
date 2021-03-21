@@ -2,6 +2,11 @@
 
 - <a href="#1">1. Code Validators</a>
 - <a href="#2">2. Responsiveness</a>
+- <a href="#3">3. Browser Compatibility</a>
+- <a href="#4">4. User Stories</a>
+- <a href="#5">5. Bugs</a>
+
+---
 
 <span id="#1"></span>
 ## 1. Code validators
@@ -32,12 +37,9 @@ The test returned two errors and some warnings.
 ![](readme-files/css-warning.jpg)
 - The warnings were related to browser cross-compatibility and they were ignored in order to have the content render properly on every browser.
 
-
 ![](readme-files/css-error.jpg)
 - The first one was solved removing the class since it wasn't necessary.
 - The second one was solved adjusting the padding to `padding: 1.1rem 0.2rem;` instead.
-
-
 
 #### [JSHint JavaScript Validator](https://jshint.com/) :
 The test returned two type of warnings:
@@ -61,7 +63,13 @@ I also asked some family members and friends to test it on their devices.
 ---
 
 <span id="#3"></span>
-## 3. User Stories
+## 3. Responsiveness
+
+
+---
+
+<span id="#4"></span>
+## 4. User Stories
 
 ###### General Users
 - As a user, I want to immediately understand the purpose of the site.
@@ -99,7 +107,13 @@ I also asked some family members and friends to test it on their devices.
 - As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
     - When a user fills in the *suggestion form*, the admin receives an email with that information.
 
+---
 
+<span id="#5"></span>
+## 5. Bugs
+
+A friend suggested to make the images clickable for better UX on mobile. 
+- This was implemented including the <img> tag in every movie miniature inside an <a> link redirecting to the movie page.
 
 ---
 
