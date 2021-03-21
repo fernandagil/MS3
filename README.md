@@ -11,7 +11,7 @@ You can visit the deployed website [here](https://ms3-movie-journal.herokuapp.co
   - <a href="#1-UX-1">1.1 Project goals</a>
   - <a href="#1-UX-2">1.2 User Stories</a>
   - <a href="#1-UX-3">1.3 Design Choices</a>
-  - <a href="#1-UX-4">1.4 Information Architecture</a>
+  - <a href="#1-UX-4">1.4 Database Design</a>
   - <a href="#1-UX-5">1.5 Wireframes</a>
 - <a href="#2-FEAT">2. Features</a>
   - <a href="#2-FEAT-1">2.1 CRUD</a>
@@ -64,7 +64,7 @@ The project's main goal is to have a place where registered users can create, re
 ![colour palette](readme-files/ms3-palette.png)
 
 <span id="1-UX-4"></span>
-### 1.4 Information Architecture
+### 1.4 Database Design
 MongoDB was used for this projec project. There are three collections in the database: 
 
 ![database](readme-files/database.png)
@@ -87,6 +87,7 @@ The wireframes were designed using [Balsamiq](https://balsamiq.com/). They're ac
 All users can:
 - view all movies
 - view all movie reviews
+- search for any movie
 
 Registered users can:
 - Add, edit and delete their movie reviews
