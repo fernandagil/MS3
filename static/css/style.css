@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Raleway&display=swap');
 
+/* ----------------------------------------------------------- BASE TEMPLATE */
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +16,34 @@ body {
     background-attachment: fixed;
 }
 
-/* --------------- BASE TEMPLATE --------------- */
+.pages-header {
+    margin: 10px;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-align: right;
+}
+
+.pages-header-bg {
+    background-image: url("../images/header.png");
+    min-height: 10vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.div-header {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    height: 30px;
+    padding: 4px;
+    font-size: 90%;
+}
+
 .flashes {
     color: #555555;
     background-color: #fafafa;
@@ -31,111 +59,29 @@ body {
     border-radius: 0.5rem;
 }
 
-.div-header {
-    margin-top: 0px;
-    margin-bottom: 50px;
-    height: 30px;
-    padding: 4px;
-    font-size: 90%;
+.a-link {
+    color: #84BAAD;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 0 4px;
 }
 
-/* --------------- NAVBAR --------------- */
+.a-link:hover {
+    color: #fafafa;
+}
+
+/* ------------------------------------------------------------------ NAVBAR */
 .nav-bar {
     border-bottom: 4px dotted #fafafa;
 }
 
-.movie-journal-icon {
-    height: 100%;
-    width: auto;
-}
-
-
-/* --------------- BACKGROUNDS & IMAGES --------------- */
-.home-header-bg {
-    background-image: url("../images/home-bg.png");
-    min-height: 85vh;
-    background-size: cover;
-    margin-bottom: 50px;
-}
-
-.pages-header-bg {
-    background-image: url("../images/header.png");
-    min-height: 10vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.movies-row {
-    padding: 10px;
-    border-radius: 0.5rem;
-}
-
-.movie-card-display {
-    background-image: url("../images/card-bg8.png");
-    background-size: cover;
-    margin: 5px 0;
-    min-height: 100px;
-    padding: 0;
-    color: #555555;
-}
-
-/* --------------- HEADERS --------------- */
-.home-header {
-    margin: 30px;
-    color: #fafafa;
-    text-shadow: 4px -4px #418a7b;
-    font-family: "Londrina Shadow", cursive;
-    font-weight: bold;
-    font-size: 8rem;
-    letter-spacing: 10px;
-}
-
-.home-subheader {
-    margin: 20px 0;
-    color: #fafafa;
-    text-shadow: 2px -2px #418a7b;
-    font-family: "Londrina Shadow", cursive;
-    font-weight: bold;
-    font-size: 3.2rem;
-    letter-spacing: 5px;
-}
-
-.pages-header {
-    margin: 10px;
-    color: #fafafa;
-    text-shadow: 2px -2px #418a7b;
-    font-family: "Londrina Shadow", cursive;
-    font-weight: bold;
-    font-size: 3rem;
-    letter-spacing: 5px;
-    text-align: right;
-}
-
 .movie-journal-icon img{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin-left: 20px;
 }
 
-.movies-header {
-    margin: 30px 0;
-    color: #fafafa;
-    text-shadow: 2px -2px #418a7b;
-    font-family: "Londrina Shadow", cursive;
-    font-weight: bold;
-    font-size: 4rem;
-    letter-spacing: 5px;
-    text-align: left;
-}
-
-.profile-header {
-    margin: 40px;
-    height: 30px;
-}
-
-/* --------------- FOOTER --------------- */
+/* ------------------------------------------------------------------ FOOTER */
 .footer-container {
     position: fixed;
     height: 60px;
@@ -178,7 +124,7 @@ body {
     background-color: #f6b86f;
 }
 
-/* --------------- BUTTONS --------------- */
+/* --------------------------------------------------------- GENERAL BUTTONS */
 .green-btn {
     background-color: #418a7b;
     color: #fafafa;
@@ -201,142 +147,7 @@ body {
     color: #fafafa;
 }
 
-.plus-btn {
-    color: #F6B86F;
-    font-size: 1.2rem;
-}
-
-.profile-btn {
-    padding: 6px;
-    min-width: 80px;
-    background-color: #418a7b;;
-    color: #fafafa;
-}
-
-
-/* --------------- DISPLAY MOVIES CARDS --------------- */
-.card-body {
-    padding: 1.25rem 0.4rem 0;
-}
-
-.card-img {
-    max-height: 180px;
-    width: auto;
-    max-width: 100%;
-    border-radius: 0.5rem;
-}
-
-.card-title {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: small;
-}
-
-.card-footer {
-    padding-top: 0;
-    background-color: transparent;
-    border-top: transparent;
-}
-
-
-
-
-
-.form-login {
-    margin-top: 45px;
-    padding: 30px;
-}
-
-.form-login a {
-    color: darkgoldenrod;
-    text-decoration: none;
-}
-
-.form-login a:hover {
-    font-size: 110%;
-}
-
-.form-icon {
-    color: orange;
-}
-
-/* --------------- MOVIE PAGES --------------- */
-.movie-page {
-    padding: 20px;
-    margin-bottom: 120px;
-}
-
-.movie-page-row {
-    border-radius: 0.5rem;
-    margin-top: 25px;
-}
-
-
-
-
-
-.movie-info {
-    font-weight: bold;
-}
-
-.movie-info-link {
-    color: #418a7b;
-}
-
-.movie-info-link:hover {
-    text-decoration: none;
-}
-
-
-.card-header {
-    padding: 2px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    border-bottom: none;
-}
-
-
-
-.movie-page-row {
-    padding: 20px;
-}
-
-.movie-synopsis {
-    max-lines: 2;
-}
-
-.movie-page-title {
-    color: orange;
-    padding: 30px 0;
-}
-
-.movie-page-img {
-    margin: 10px 0;
-    min-width: 200px;
-    max-width: 100%;
-    max-height: 350px;
-    border-radius: 0.5rem;
-}
-
-.reviews-title {
-    margin: 30px auto;
-    text-align: center;
-    max-width: 600px;
-    position: relative;
-}
-
-/* --------------- EDIT REVIEW --------------- */
-.review-footer {
-    margin: 8px 0;
-}
-
-.edit-review-heading {
-    margin-top: 20px;
-}
-
-
-
-/* --------------- SHOW MORE/LESS --------------- */
+/* ---------------------------------------------------------- SHOW MORE/LESS */
 .comment {
     padding-bottom: 0;
     margin: 5px;
@@ -345,7 +156,7 @@ body {
 }
 
 a.morelink {
-	text-decoration:none;
+	text-decoration: none;
     outline: none;
     color: #84BAAD;
 }
@@ -354,42 +165,7 @@ a.morelink {
 	display: none;
 }
 
-.comment-section {
-    padding: 20px 0;
-}
-
-.comment-text {
-    padding-top: 24px;
-    margin: 10px 0;
-    background-color: #ffffff28;
-    border-radius: 0.5rem;
-}
-
-.comment-footer {
-    color: #84BAAD;
-}
-
-/* --------------- ADD & EDIT MOVIE PAGES --------------- */
-
-.review-form {
-    border-radius: 0.5rem;
-    padding: 10px;
-    margin-bottom: 120px;
-    margin-top: 30px;
-}
-
-.form-movie-input {
-    padding: 10px 0;
-}
-
-.form-row-div {
-    margin-top: 20px;
-}
-
-/* --------------- SEARCH PAGE --------------- */
-.search-container {
-}
-
+/* ------------------------------------------------------------------ SEARCH */
 .search-result {
     border-radius: 0.5rem;
     padding: 20px;
@@ -423,7 +199,187 @@ a.morelink {
     margin-top: 10px;
 }
 
-/* --------------- ERROR HANDLING --------------- */
+/* ---------------------------------------------------------- LOGIN/REGISTER */
+.form-login {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* -------------------------------------------------------- PROFILE PAGE*/
+.profile-header {
+    margin: 40px;
+    height: 30px;
+}
+
+.profile-btn {
+    padding: 6px;
+    min-width: 80px;
+    background-color: #418a7b;;
+    color: #fafafa;
+}
+
+/* --------------------------------------------------------------- HOME PAGE */
+.home-header {
+    margin: 30px;
+    color: #fafafa;
+    text-shadow: 4px -4px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 8rem;
+    letter-spacing: 10px;
+}
+
+.home-header-bg {
+    background-image: url("../images/home-bg.png");
+    min-height: 85vh;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.home-subheader {
+    margin: 20px 0;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+}
+
+.movies-header {
+    margin: 30px 0;
+    color: #fafafa;
+    text-shadow: 2px -2px #418a7b;
+    font-family: "Londrina Shadow", cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+/* -------------------------------------------------------- HOME PAGE: CARDS */
+.movies-row {
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.movie-card-display {
+    background-image: url("../images/card-bg8.png");
+    background-size: cover;
+    margin: 5px 0;
+    min-height: 100px;
+    padding: 0;
+    color: #555555;
+}
+
+.card-body {
+    padding: 1.25rem 0.4rem 0;
+}
+
+.card-img {
+    max-height: 180px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 0.5rem;
+} 
+
+.card-title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: small;
+}
+
+.card-footer {
+    padding-top: 0;
+    background-color: transparent;
+    border-top: transparent;
+}
+
+.plus-btn {
+    color: #F6B86F;
+    font-size: 1.2rem;
+}
+
+/* -------------------------------------------------------------- MOVIE PAGE */
+.movie-page {
+    padding: 20px;
+    margin-bottom: 120px;
+}
+
+.movie-page-row {
+    border-radius: 0.5rem;
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.movie-info {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.movie-synopsis {
+    max-lines: 2;
+}
+
+.movie-page-img {
+    margin: 10px 0;
+    min-width: 200px;
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 0.5rem;
+}
+
+/* ----------------------------------------------------- MOVIE PAGE: REVIEWS */
+.reviews-title {
+    margin: 30px auto;
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+}
+
+.comment-section {
+    padding: 20px 0;
+}
+
+.comment-text {
+    padding-top: 24px;
+    margin: 10px 0;
+    background-color: #ffffff28;
+    border-radius: 0.5rem;
+}
+
+.comment-footer {
+    color: #84BAAD;
+}
+
+/* ------------------------------------------------------------- EDIT REVIEW */
+.review-footer {
+    margin: 8px 0;
+}
+
+.edit-review-heading {
+    margin-top: 20px;
+}
+
+
+/* --------------------------------------------------------- ADMIN: ADD/EDIT */
+
+.review-form {
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+
+.form-movie-input {
+    padding: 10px 0;
+}
+
+.form-row-div {
+    margin-top: 20px;
+}
+
+/* ---------------------------------------------------- ERROR HANDLING PAGES */
 .error-header{
     margin: 30px 5px;
     color: #fafafa;
@@ -435,7 +391,7 @@ a.morelink {
     text-align: center;
 }
 
-/* --------------- MEDIA QUERIES --------------- */
+/* ----------------------------------------------------------- MEDIA QUERIES */
 
 /* Media queries for extra small devices */
 @media only screen and (max-width: 600px) {
@@ -471,14 +427,4 @@ a.morelink {
     .home-header {
         text-align: right;
     }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
 }

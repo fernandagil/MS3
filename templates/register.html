@@ -11,7 +11,7 @@
 
     <div class="col-md-6 offset-md-3">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body text-container">
                 <form method="POST" action="{{ url_for('register') }}" onsubmit="return sendWelcomeEmail(this);">
                     
                     <!-- username -->
@@ -42,8 +42,8 @@
                     
                     <!-- login option -->
                     <div class="form-group form-login">
-                        <h6 class="card-subtitle mb-2 text-muted">If you already have an account, <br>
-                            <a href="{{ url_for('login') }}">log in here!</a></h6>
+                        <h6 class="card-subtitle my-1">If you already have an account, <br>
+                            <a href="{{ url_for('login') }}" class="a-link">log in here!</a></h6>
                     </div>
                 </form>
             </div>
