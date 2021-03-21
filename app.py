@@ -22,8 +22,7 @@ mongo = PyMongo(app)
 
 
 # ----------------------------------- HOME PAGE, MOVIE PAGE AND LEAVE REVIEWS #
-
-# Main page 
+# Main page
 @app.route("/")
 @app.route("/get_movies")
 def get_movies():
@@ -49,7 +48,7 @@ def display_movie(movie_id):
 
     # Leaves a review about that movie
     if request.method == "POST":
-        
+
         # Only users can add reviews
         if not session.get("user"):
             return render_template("404.html")
@@ -63,7 +62,8 @@ def display_movie(movie_id):
         flash("Review Successfully Added")
 
     movie = mongo.db.movies.find_one({"_id": ObjectId(movie_id)})
-    return render_template("display_movie.html", movie_id=movie_id, reviews=reviews, movie=movie)
+    return render_template("display_movie.html", movie_id=movie_id,
+                           reviews=reviews, movie=movie)
 
 
 # --------------------------------------------------- EDIT AND DELETE REVIEWS #
@@ -144,12 +144,12 @@ def login():
 
         if existing_user:
             # ensure hashed password matches user input
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+            if check_password_hash(existing_user["password"],
+                                   request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -177,7 +177,8 @@ def profile(username):
         {"created_by": session["user"]}))
 
     if session["user"]:
-        return render_template("profile.html", username=username, reviews=reviews)
+        return render_template("profile.html", username=username,
+                               reviews=reviews)
 
     return redirect(url_for("login"))
 
@@ -189,7 +190,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     # where to redirect after logout (to login again or main page?)
-    return redirect(url_for("login")) 
+    return redirect(url_for("login"))
 
 
 # ------------------------------------------- ADMIN: ADD, EDIT, DELETE MOVIES #
