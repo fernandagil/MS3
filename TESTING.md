@@ -27,10 +27,17 @@ This two pages returned the same errors since it was the same form, just adjuste
 - The for attribute related errors were fixed by including the missing ID element in the <input> field below the <labels>.
 
 ### [CSS Validator](https://jigsaw.w3.org/css-validator/) : 
-
-The test returned some warnings related to some browser cross-compatibility. They were ignored in order to have the content render properly on every browser.
+The test returned two errors and some warnings. 
 
 ![](readme-files/css-warning.jpg)
+- The warnings were related to browser cross-compatibility and they were ignored in order to have the content render properly on every browser.
+
+
+![](readme-files/css-error.jpg)
+- The first one was solved removing the class since it wasn't necessary.
+- The second one was solved adjusting the padding to `padding: 1.1rem 0.2rem;` instead.
+
+
 
 #### [JSHint JavaScript Validator](https://jshint.com/) :
 The test returned two type of warnings:
