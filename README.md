@@ -134,6 +134,15 @@ The admin can:
 **Log In Page**:
 - **Log In Form**: allows users to log in with the information they provided in their registration form.
 
+**Profile Page**:
+- **User Reviews**: allows users see all the reviews they've left in any movies.
+
+**Add Movie Page**:
+- **Add Movie Form**: allows the admin to add new movies to the database.
+
+**Edit Movie Page**:
+- **Edit Movie Form**: allows the admin to edit any movie in the database.
+
 **403, 404 and 500 Pages**:
 - allows users to stay on the page if something goes wrong, and makes it easier to navigate back to *Home Page*.
 
