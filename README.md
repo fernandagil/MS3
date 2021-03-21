@@ -1,5 +1,5 @@
 # Movie Journal
-![Movie Journal](readme-files/ms3-amiresponsive.png)
+![Movie Journal](readme-files/amiresponsive.jpg)
 
 Movie Journal is the place where you can keep track of your favourite (and least favourite) movies by leaving reviews.
  
@@ -31,17 +31,17 @@ You can visit the deployed website [here](https://ms3-movie-journal.herokuapp.co
 ### 1.1 Project Goals
 The project's main goal is to have a place where registered users can create, read, update and delete movie reviews.
 
-- They can create a review by clicking on any movie
-- They can read a review by clicking on any movie. This can be done by unregistered users as well
-- They can update a review by clicking 'edit' on the review in their *Profile Page*
-- They can delete a review by clicking 'delete' on the review in their *Profile Page*
- 
+- They can create a review by clicking on any movie.
+- They can read a review by clicking on any movie. This can be done by unregistered users as well.
+- They can update a review (only the reviews created by that user) by clicking **Edit** on the review in their *Profile Page* or in the Movie Page.
+- They can delete a review by clicking 'delete' on the review in their *Profile Page* or in the Movie Page.
+
 <span id="1-UX-2"></span>
 ### 1.2 User Stories
 ###### General Users
 - As a user, I want to immediately understand the purpose of the site.
 - As a user, I want to be able to see reviews that other users have created about a movie.
-- As a user, I want to be able to search for a movie.
+- As a user, I want to be able to search for a movie to see its reviews.
 - As a user, I want to be able to suggest new movies to add to the database.
 - As a user, I want to see a picture next to the movie title so I can recognise the movie quickly.
 - As a user, I want to be able to register easily.
@@ -125,12 +125,19 @@ The admin can:
     - **Synopsis**
     - **Reviews Section**: allows users to see the reviews for that movie. It also allows registered users to leave their own reviews about that movie.
 
+**Edit Review Page**:
+- **Edit Review Form**: allows users to edit a review the wrote.
+
 **Register Page**:
- - **Registration Form**: allows users to sign up by providing some information.
+- **Registration Form**: allows users to sign up by providing some information.
  
- **Log In Page**:
- - **Log In Form**: allows users to log in with the information they provided in their registration form.
- 
+**Log In Page**:
+- **Log In Form**: allows users to log in with the information they provided in their registration form.
+
+**403, 404 and 500 Pages**:
+- allows users to stay on the page if something goes wrong, and makes it easier to navigate back to *Home Page*.
+
+
 <span id="2-FEAT-3"></span>
 ### 2.3 Potential Features
 Some futures that I would like to implement in the future are:
