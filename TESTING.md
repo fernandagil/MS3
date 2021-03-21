@@ -51,6 +51,29 @@ The test returned some errors and warnings. All of them were fixed following the
 To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and [Responsive Design Checker](https://www.responsivedesignchecker.com/).
 I also asked some family members and friends to test it on their devices.
 
+---
+
+<span id="#3"></span>
+## 3. User Stories
+
+
+###### General Users
+- As a user, I want to immediately understand the purpose of the site.
+- As a user, I want to be able to see reviews that other users have created about a movie.
+- As a user, I want to be able to search for a movie to see its reviews.
+- As a user, I want to be able to suggest new movies to add to the database.
+- As a user, I want to see a picture next to the movie title so I can recognise the movie quickly.
+- As a user, I want to be able to register easily.
+
+###### Registered Users
+- As a registered user, I want to be able to write a review about a movie.
+- As a registered user, I want to be able to edit or delete a review I created.
+- As a registered user, I want to receive feedback when I made a change successfully.
+
+###### Project Owner / Admin
+- As the project owner, I want to be able to add, read, update, and delete movies from the database.
+- As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
+
 
 
 

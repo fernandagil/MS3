@@ -28,7 +28,9 @@
             {% for movie in movies %}
                 <div class="col-3 col-md-2 col-lg-1 card movie-card-display">
                     <div class="card-body">
-                        <img src="{{ movie.movie_img_link }}" class="card-img" alt="{{ movie.movie_name }}">
+                        <a href="{{ url_for('display_movie', movie_id=movie._id) }}" class="card-img" data-target="#id_{{ movie._id }}">
+                            <img src="{{ movie.movie_img_link }}" class="card-img" alt="{{ movie.movie_name }}">
+                        </a>
                         <h6 class="card-title">{{ movie.movie_name }}</h6>
                     </div>
                     <div class="card-footer">
