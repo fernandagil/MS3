@@ -56,24 +56,41 @@ I also asked some family members and friends to test it on their devices.
 <span id="#3"></span>
 ## 3. User Stories
 
-
 ###### General Users
 - As a user, I want to immediately understand the purpose of the site.
+    - The project has a general cinematic look: the main page background suggests it, the movies miniatures places in like a movie roll and both the logo and favicon is a camera.
+    - When the user first sees the page, they see the name (*Movie Journal*) and the *search bar* that immediately makes the user realise the general purpose of the project.
 - As a user, I want to be able to see reviews that other users have created about a movie.
+    - The user can click on any movie and see the reviews left for that movie. If they're looking for a specific movie they can use the *search bar*.
 - As a user, I want to be able to search for a movie to see its reviews.
+    - The *search bar* is very accesible: there is one *search bar* on the navbar on every page, there is one *search bar* in the main page as a call to action. 
+    - If the user registers or log in, they can find another *search bar* in the profile page.
 - As a user, I want to be able to suggest new movies to add to the database.
+    - There is a *suggestion form* placed at the bottom of the *home page* to send a movie suggestion. 
+    - When the user searches for a particular movie, if that movie doesn't exist in the database yet, they also get a *suggestion form*.
 - As a user, I want to see a picture next to the movie title so I can recognise the movie quickly.
+    - There movie miniatures are styled in a way that for each movie there is an image. These images are big enough (but not too big) for the user to be able to find a movie with just a quick look.
 - As a user, I want to be able to register easily.
+    - The *registration form* is a simple form that includes only the basics to make it secure: username, email and password.
 
 ###### Registered Users
 - As a registered user, I want to be able to write a review about a movie.
+    - The user can easily review any movie by clicking on them and scrolling down to the *reviews section* section
 - As a registered user, I want to be able to edit or delete a review I created.
+    - The easiest way for the users to find a review they wrote is to go to their *profile page*. There they can find all the reviews they've written in Movie Journal and edit or delete them.
+    - Another way of editing or deleting a review is directly in the movie page.
 - As a registered user, I want to receive feedback when I made a change successfully.
+    - There are several flash messages that pop up after the user has made a change. For example: after adding a new review, after editing or deleting a review, if the registration was successful, or if the sername already exists.
+    - Also, when the user registers, the receive an email confirmating this.
 
 ###### Project Owner / Admin
 - As the project owner, I want to be able to add, read, update, and delete movies from the database.
-- As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
+    - The Admin user is the only one that can add, edit and delete movies:
+        - To add a movie they can click on *Add New Movie* in the navbar. 
+        - To edit or delete a movie the admin can click on any movie. On the top right, there are an *edit* and a *delete* button that only show to the admin. 
 
+- As the project owner, I want to be able to receive feedback from users so I can add new movies to the database.
+    - When a user fills in the *suggestion form*, the admin receives an email with that information.
 
 
 
