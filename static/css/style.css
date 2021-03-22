@@ -40,14 +40,6 @@ body {
     background-size: cover;
 }
 
-.div-header {
-    margin-top: 0px;
-    margin-bottom: 50px;
-    height: 30px;
-    padding: 4px;
-    font-size: 90%;
-}
-
 .text-container {
     color: #fafafa;
     background-color: #555555;
@@ -218,7 +210,8 @@ a.morelink {
 
 /* --------------------------------------------------------------- HOME PAGE */
 .home-header {
-    margin: 30px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     color: #fafafa;
     text-shadow: 4px -4px #418a7b;
     font-family: "Londrina Shadow", cursive;
@@ -246,7 +239,7 @@ a.morelink {
 }
 
 .movies-header {
-    margin: 30px 0;
+    margin: 50px 0;
     color: #fafafa;
     text-shadow: 2px -2px #418a7b;
     font-family: "Londrina Shadow", cursive;
