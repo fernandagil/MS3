@@ -32,3 +32,10 @@ $(document).ready(function() {
 		return false;
 	});
 });
+
+// Flash modal
+$(document).ready(function() { // When page finished loading
+  if ( $('.flash').length ) { // if there is an DOM that has class has-error
+     $('#flashModal').modal('show'); // Show Modal
+  }
+});

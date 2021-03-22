@@ -48,15 +48,6 @@ body {
     font-size: 90%;
 }
 
-.flashes {
-    color: #555555;
-    background-color: #fafafa;
-    padding: 8px;
-    border: 4px double #F6B86F;
-    border-radius: 0.5rem;
-    margin-top: 8px;
-}
-
 .text-container {
     color: #fafafa;
     background-color: #555555;

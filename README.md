@@ -276,6 +276,8 @@ The functionality for the *show more*/*show less* button is based in [this artic
  
 I took inspiration from [Juan Stelling](https://github.com/juanstelling/MS3_breaktasty) for the error handlers.
 
+The code to implement the flash messages is from [JavaScriptio](https://javascriptio.com/view/1956134/how-to-show-flash-messages-in-bootstrap-modal-window).
+
 All the information about the movies and some reviews were obtained from [IMDB](https://www.imdb.com/).
 
 ### 6.2 Media

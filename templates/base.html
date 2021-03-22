@@ -78,14 +78,23 @@
                 {% endblock %}
             </div>
 
-            <!-- flash messages -->
+            <!-- flash messages --> 
             <section>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         {% for message in messages %}
-                            <div class="row text-center">
-                                <div class="col-8 offset-2 flashes">
-                                    <h6>{{ message }}</h6>
+                            <div class="modal flash" id="flashModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>{{ message }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         {% endfor %}
