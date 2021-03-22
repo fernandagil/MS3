@@ -291,3 +291,9 @@ This project has been designed using resources from [Freepik.com](https://www.fr
 Some of them have been modified for the purpose of this project.
  
 ### 6.1 Acknowledgments
+
+Thanks to the Code Institute Tutor team.
+
+I would like to thank my Code Institute Mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168?challengeId=AQEKIPiMVQS1uAAAAXhXZO4JUTYAwGrn3a3ICYJwDXgtVxpb5Lm_EQEZmPT9hT3z7Uifirb6mr6m0N7_3gvPwR75qwOdvFrtrg&submissionId=a1fe46c1-8783-6e16-ec3c-03a6037d0058&originalSubdomain=ng) for his advice and guidance on the project.
+
+Thanks to all the family and friends who took time to test the project and give their opinions and suggestions.

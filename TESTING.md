@@ -112,8 +112,16 @@ I also asked some family members and friends to test it on their devices.
 <span id="#5"></span>
 ## 5. Bugs
 
-A friend suggested to make the images clickable for better UX on mobile. 
-- This was implemented including the <img> tag in every movie miniature inside an <a> link redirecting to the movie page.
+- When creating the add a new movie functionality, at first I could add a new movie to the database, but when clicking on any created movie, no matter which one, it would only show the first movie added to the databse.
+I wondered if the information wasn't being saved in the database, but when checking on mongodb, I could see that the information was saved properly.
+    - With help from Code Institut Tutor Team, we found that I wasn't linking each movie id properly, since I had it on the '+' button (the one that leads to the movie modal), but not on the modal itself. 
+    This was solved and I also moved the movie modal to a page for better UX.
+
+- Since I store the movie id as an object in the reviews database, I had an issue retrieving just the movie name from it. 
+    - After talking to the Tutor team, I found out that the best way to get that information from inside the *reviews* collection in MongoDB was to use dot notation but going on a new level and it worked: `{{ review.movie_name.movie_name }}`.
+
+- A friend suggested to make the images clickable for better UX on mobile. 
+    - This was implemented including the <img> tag in every movie miniature inside an <a> link redirecting to the movie page.
 
 ---
 
