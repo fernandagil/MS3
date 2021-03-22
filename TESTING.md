@@ -28,7 +28,7 @@ This two pages returned the same errors since it was the same form, just adjuste
 ![](readme-files/html-addmovie.jpg)
 ![](readme-files/html-editmovie.jpg)
 
-- The <h4>, maxlength and minlegth related error were fixed by ommiting them since they weren't necessary for the correct functioning of the site nor didn't affect the styling.
+- The h4, maxlength and minlegth related error were fixed by ommiting them since they weren't necessary for the correct functioning of the site nor didn't affect the styling.
 - The for attribute related errors were fixed by including the missing ID element in the <input> field below the <labels>.
 
 ### [CSS Validator](https://jigsaw.w3.org/css-validator/) : 
@@ -59,13 +59,13 @@ The test returned some errors and warnings. All of them were fixed following the
 ## 2. Responsiveness
 To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and [Responsive Design Checker](https://www.responsivedesignchecker.com/).
 I also asked some family members and friends to test it on their devices.
-![](readme-files/responsiveness.jpg)
+![](readme-files/responsiveness.png)
 
 ---
 
 <span id="#3"></span>
 ## 3. Browser compatibility
-![](readme-files/browser-comp.jpg)
+![](readme-files/browser-comp.png)
 
 ---
 
