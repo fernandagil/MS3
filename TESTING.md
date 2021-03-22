@@ -59,12 +59,13 @@ The test returned some errors and warnings. All of them were fixed following the
 ## 2. Responsiveness
 To test the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and [Responsive Design Checker](https://www.responsivedesignchecker.com/).
 I also asked some family members and friends to test it on their devices.
+![](readme-files/responsiveness.jpg)
 
 ---
 
 <span id="#3"></span>
-## 3. Responsiveness
-
+## 3. Browser compatibility
+![](readme-files/browser-comp.jpg)
 
 ---
 
